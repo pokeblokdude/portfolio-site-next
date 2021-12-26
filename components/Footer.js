@@ -1,11 +1,15 @@
 import Link from 'next/link'
 import { FaGithub } from 'react-icons/fa'
 
-const Footer = () => {
+const Footer = ({ sticky }) => {
   return (
     <div 
-      className="w-full h-14 bg-neutral-800
+      className={sticky ? "w-full h-14 bg-neutral-900 flex items-center justify-center fixed left-0 bottom-0 \
+        border-t border-neutral-700" 
+        : 
+        "w-full h-14 bg-neutral-900 \
         flex items-center justify-center border-t border-neutral-700"
+      }
     >
       <p className="font-light text-neutral-300">This website was made using Next.js and Tailwind CSS.</p>
       <p className='font-light m-2 text-neutral-300'>|</p>
