@@ -4,6 +4,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'mono': ['Roboto Mono']
+    },
     extend: {
       backgroundImage: {
         'the-machine': 'url(~/img/bg-the-machine.jpeg)',
