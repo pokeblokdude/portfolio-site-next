@@ -4,7 +4,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'the-machine': 'url(~/img/bg-the-machine.jpeg)',
+        'gsp': 'url(~/img/bg-gsp.jpeg)',
+        'timelapse': 'url(~/img/bg-timelapse.jpeg)'
+      }
+    },
   },
   plugins: [],
 }
