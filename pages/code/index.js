@@ -106,7 +106,7 @@ const Code = () => {
         <div className='w-[95%] flex flex-col self-center mt-10'>
           <h2 className="pl-1 mb-4 font-mono">02. This Website :)</h2>
           <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
-            <a target='_blank' className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px]'>View source on GitHub.</a>
+            <a target='_blank' className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px] w-fit text-neutral-300'>View source on GitHub.</a>
           </Link>
         </div>
       </div>
