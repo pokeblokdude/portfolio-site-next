@@ -62,7 +62,7 @@ const Film = () => {
               <h2 className="w-full pl-1 mb-4 font-mono">01. Global Singularity Project</h2>
               <div className='full flex justify-center items-center bg-gsp bg-cover bg-center h-[360px]'>
                 <div
-                  className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                  className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
                     transition duration-300 py-20 px-20 backdrop-blur"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=GzvWQ_fnKt0');
@@ -95,7 +95,7 @@ const Film = () => {
                     project that got me into film. Using my first DSLR camera, I shot various landscapes around my home
                     in western Massachusetts. The film is set to music from C418&apos;s <span className="italic">Minecraft - Volume Beta.</span>
                   </p>
-                  <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
+                  <p className="text-sm text-neutral-400 font-mono mt-8">Click to view.</p>
                 </div>
               </div>
             </div>

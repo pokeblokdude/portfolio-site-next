@@ -35,7 +35,7 @@ const Video = () => {
               className='w-[95%] flex flex-col justify-center items-center bg-smg bg-cover bg-center h-[480px]'
             >
               <div
-                className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
                   transition duration-300 py-20 px-40 backdrop-blur"
                 onClick={() => {
                   setVideoUrl('https://youtu.be/OSq1M7QD2wM');
@@ -67,7 +67,7 @@ const Video = () => {
               className='w-[95%] flex flex-col justify-center items-center bg-csgo bg-cover bg-center h-[480px]'
             >
               <div
-                className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
                   transition duration-300 py-20 px-40 backdrop-blur"
                 onClick={() => {
                   setVideoUrl('https://youtu.be/wuCA8XTfaSg');
@@ -95,7 +95,7 @@ const Video = () => {
               className='w-[95%] flex flex-col justify-center items-center bg-pr bg-cover bg-center h-[480px]'
             >
               <div
-                className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
                   transition duration-300 py-20 px-40 backdrop-blur"
                 onClick={() => {
                   setVideoUrl('https://www.youtube.com/watch?v=b9i07oCLcPc');
