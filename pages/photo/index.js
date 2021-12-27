@@ -13,11 +13,12 @@ const Photo = () => {
       <div className="w-[1160px] flex flex-col mb-20 items-center">
 
         <h1 className="text-2xl font-semibold w-full self-center mt-10">Photos</h1>
-        <h2 className='w-full mb-10 text-neutral-200'>See full-quality versions on&nbsp;
-          <Link href=''>
+        <h2 className='w-full text-neutral-200'>See full-quality versions on&nbsp;
+          <Link href='https://www.flickr.com/photos/164680178@N08/albums/72177720295539332'>
             <a target='_blank' className='font-semibold hover:underline hover:cursor-pointer'>Flickr</a>
           </Link>
         </h2>
+        <h3 className='w-full mb-4 mt-2 text-sm text-neutral-400'>This page may take a few seconds to load.</h3>
 
         <div className='flex w-full justify-between items-center'>
           <div className="flex w-full h-[773px] relative">
@@ -203,6 +204,36 @@ const Photo = () => {
             <Image src='/photo/janna.jpg' layout='fill' className='object-contain' alt=''/>
           </div>
         </div>
+        <div className='flex w-full justify-between items-center'>
+          <div className="flex w-full h-[780px] relative">
+            <Image src='/photo/westport.jpg' layout='fill' className='object-contain' alt=''/>
+          </div>
+        </div>
+
+        <h1 className="text-2xl font-semibold w-full self-center mt-10">Astro</h1>
+        <h2 className='w-full text-neutral-200 mb-6'>
+          Images from a remote telescope for my high school astronomy honors class.
+        </h2>
+
+        <div className='flex w-full justify-between items-center'>
+          <div className="flex w-full h-[868px] relative">
+            <Image src='/photo/astro/Orion Nebula.jpg' layout='fill' className='object-contain' alt=''/>
+          </div>
+        </div>
+        <div className='flex w-full justify-between items-center'>
+          <div className="flex w-[575px] h-[450px] relative items-center">
+            <Image src='/photo/astro/Sculptor Galaxy.jpg' layout='fill' className='object-contain' alt=''/>
+          </div>
+          <div className="flex w-[575px] h-[450px] relative">
+            <Image src='/photo/astro/47 Tucanae.jpg' layout='fill' className='object-contain' alt=''/>
+          </div>
+        </div>
+        <div className='flex w-full justify-between items-center'>
+          <div className="flex w-full h-[868px] relative">
+            <Image src='/photo/astro/The Pleiades.jpg' layout='fill' className='object-contain' alt=''/>
+          </div>
+        </div>
+
       </div>
       <Footer sticky={false}/>
     </>
