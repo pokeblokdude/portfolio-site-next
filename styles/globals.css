@@ -5,8 +5,23 @@
 @tailwind utilities;
 
 @layer base {
+  *{
+    scrollbar-color: hsl(0, 0%, 30%) hsl(0, 0%, 10%);
+  }
   html, body {
     @apply text-white;
     @apply bg-neutral-900;
+  }
+  ::-webkit-scrollbar {
+    background: hsl(0, 0%, 10%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 30%);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 40%);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background: hsl(0, 0%, 50%);
   }
 }

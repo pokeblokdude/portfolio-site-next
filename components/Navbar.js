@@ -14,8 +14,8 @@ const Navbar = () => {
           <Link href='/code'><a>Code</a></Link>
           <Link href='/photo'><a>Photo</a></Link>
           <p className='font-thin mb-1 mx-1'>|</p>
-          <Link href='https://www.youtube.com/channel/UCGPSDan8oaEvppSeaLNkofg'><a><FaYoutube/></a></Link>
-          <Link href='https://github.com/pokeblokdude'><a><FaGithub/></a></Link>
+          <Link href='https://www.youtube.com/channel/UCGPSDan8oaEvppSeaLNkofg'><a target='_blank'><FaYoutube/></a></Link>
+          <Link href='https://github.com/pokeblokdude'><a target='_blank'><FaGithub/></a></Link>
         </div>
       </nav>
   )

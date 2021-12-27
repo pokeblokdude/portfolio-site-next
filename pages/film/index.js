@@ -1,7 +1,10 @@
 import ReactPlayer from "react-player/youtube"
 import Modal from 'react-modal'
 import React from 'react'
-import Footer from './../../components/Footer'
+import Head from 'next/head'
+import { MdFullscreen } from 'react-icons/md'
+import Footer from "../../components/Footer"
+
 const Film = () => {
   const [ modalOpen, setModalOpen ] = React.useState(false);
   const [ videoUrl, setVideoUrl ] = React.useState('');
@@ -17,6 +20,9 @@ const Film = () => {
 
   return (
     <>
+      <Head>
+        <title>Films | Alex Howe</title>
+      </Head>
       <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col mb-20">
 
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Films</h1>
@@ -28,7 +34,7 @@ const Film = () => {
               className='w-[95%] flex flex-col justify-center items-center bg-the-machine bg-cover bg-center h-[480px]'
             >
               <div
-                className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                className="w-full h-full flex flex-col bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
                   transition duration-300 py-20 px-40 backdrop-blur"
                 onClick={() => {
                   setVideoUrl('https://www.youtube.com/watch?v=l0_MGz5IqvY');
@@ -45,6 +51,8 @@ const Film = () => {
                   I wrote, directed, shot and edited the film. It was written over Thanksgiving break and shot at 
                   my house the next weekend. The music is by my good friend, Caleb Kennedy.
                 </p>
+                
+                <p className="text-sm text-neutral-400 font-mono mt-10">Click to view.</p>
               </div>
               
             </div>
@@ -67,6 +75,7 @@ const Film = () => {
                     Denis Villenueve&apos;s <span className="italic">Blade Runner 2049. G.S.P.</span> was my first short film;
                     I wrote, directed, shot and edited it. The music is by Caleb Kennedy.
                   </p>
+                  <p className="text-sm text-neutral-400 font-mono mt-10">Click to view.</p>
                 </div>
               </div>
             </div>
@@ -84,9 +93,9 @@ const Film = () => {
                   <p className="leading-loose">
                     <span className="font-mono font-bold italic">A Time-Lapse Journey through 2016 </span>was the 
                     project that got me into film. Using my first DSLR camera, I shot various landscapes around my home
-                    in western Massachusetts.
+                    in western Massachusetts. The film is set to music from C418&apos;s <span className="italic">Minecraft - Volume Beta.</span>
                   </p>
-                  <p className="mt-8">The film is set to music from C418&apos;s <span className="italic">Minecraft - Volume Beta.</span></p>
+                  <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
                 </div>
               </div>
             </div>
