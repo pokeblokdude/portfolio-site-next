@@ -21,7 +21,7 @@ const Code = () => {
             <Image src='/bg/bg-ukg.PNG' layout='fill' className='object-cover object-top' alt='' priority={true} loading='eager' quality={100}/>
             <div
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur z-10"
+                transition duration-300 py-20 px-40 narrow:px-28 min:px-20 backdrop-blur z-10"
             >
               <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2021.</p>
               <p className="leading-relaxed">
@@ -60,7 +60,7 @@ const Code = () => {
             <Image src='/bg/bg-ourhousebot.PNG' layout='fill' className='object-cover object-top' alt='' priority={true} loading='eager' quality={100}/>
             <div
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur z-10"
+                transition duration-300 py-20 px-40 narrow:px-28 min:px-20 backdrop-blur z-10"
             >
               <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2020.</p>
               <p className="leading-relaxed">
@@ -97,7 +97,7 @@ const Code = () => {
               </ul>
               <p className="leading-relaxed mt-2">
                 The project has slightly evolved over time; most notably, I switched from using JSON files to
-                MongoDB for data storage. I occaisionally go back an work on it every now and then.
+                MongoDB for data storage. I occasionally go back an work on it every now and then.
               </p>
               <div className='mt-4 flex'>
                 <Link href='https://github.com/pokeblokdude/ourhouse-bot'>

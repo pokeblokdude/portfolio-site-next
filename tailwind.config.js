@@ -9,6 +9,8 @@ module.exports = {
     },
     extend: {
       screens: {
+        'narrow': { 'raw': '(max-width: 1230px)' },
+        'min': { 'raw': '(max-width: 1130px)'},
         'tall': { 'raw': '(min-height: 1280px)' }
       }
     },

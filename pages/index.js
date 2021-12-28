@@ -35,7 +35,7 @@ export default function Home() {
             <Image src='/bg/bg-smg.png' layout='fill' className='object-cover object-center pointer-events-none' alt=''/>
             <div
               className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                transition duration-300 py-16 px-40 backdrop-blur flex flex-col z-10"
+                transition duration-300 py-16 px-40 narrow:px-20 backdrop-blur flex flex-col z-10"
               onClick={() => {
                 setVideoUrl('https://youtu.be/OSq1M7QD2wM');
                 setModalOpen(true);
@@ -70,10 +70,10 @@ export default function Home() {
               <Image src='/bg/bg-ukg.PNG' layout='fill' className='object-cover object-top' alt=''/>
               <div
                 className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-16 px-20 backdrop-blur flex flex-col z-10"
+                  transition duration-300 py-16 px-20 narrow:py-14 narrow:px-16 min:py-12 backdrop-blur flex flex-col z-10"
               >
                 <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2021.</p>
-                <p className="leading-relaxed w-full max-w-[600px] self-center">
+                <p className="leading-relaxed min:leading-normal w-full max-w-[600px] self-center">
                   <span className='font-mono font-bold italic'>Job Referral Tool</span> &nbsp;was a semester-long project
                   for CS320 - Software Engineering at UMass Amherst. Students were split into teams of 10, each tasked with
                   creating a prototype for an internal job referral app for the HR company, UKG.
@@ -97,7 +97,7 @@ export default function Home() {
               <Image src='/bg/bg-odyssey2d.jpg' layout='fill' className='object-cover object-bottom' alt=''/>
               <div
                 className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all
-                  transition duration-300 py-16 px-20 backdrop-blur z-10"
+                  transition duration-300 py-16 px-20 narrow:py-14 narrow:px-16 backdrop-blur z-10"
               >
                 <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
                 <p className="leading-relaxed">

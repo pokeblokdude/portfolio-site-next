@@ -21,10 +21,10 @@ const Game = () => {
             <Image src='/bg/bg-odyssey2d.jpg' layout='fill' className='object-cover object-bottom' alt='' priority={true} loading='eager' quality={100}/>
             <div
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur z-10"
+                transition duration-300 py-20 px-40 narrow:px-28 backdrop-blur z-10"
             >
               <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
-              <p className="leading-loose">
+              <p className="leading-loose min:leading-relaxed">
                 <span className='font-mono font-bold italic'>Odyssey 2D</span> &nbsp;is a 2D platformer with
                 acceleration-based movement. The original idea was to try and remake the base movement mechanics 
                 from <span className='italic'> Super Mario Odyssey</span> in a 2D environment, hence the name.
@@ -33,15 +33,15 @@ const Game = () => {
                 &nbsp;The player can walk, crouch, jump (variable height), wall-slide, wall-jump, ledge-grab and air-dive.
                 All of this was implemented using a finite state machine for the player script.
               </p>
-              <p className='leading-loose mt-4'>
+              <p className='leading-loose min:leading-relaxed mt-4'>
                 All of the pixel art and animations are original, created using Aseprite. I&apos;ve toyed around a 
                 lot with 2D/3D pixel art styles, similar to&nbsp;
                 <Link href='https://www.youtube.com/watch?v=ZsMHY4LDyRE'>
-                  <a target='_blank' className='font-semibold hover:underline hover:cursor-pointer'>this prototype by &apos;t3ssl8r&apos;.</a>
+                  <a target='_blank' className='font-semibold hover:underline hover:cursor-pointer'>this prototype by &apos;t3ssel8r&apos;.</a>
                 </Link>
                 &nbsp;For now I&apos;ve stuck with 2D until I learn more about graphics and shaders.
               </p>
-              <p className='leading-loose mt-4'>
+              <p className='leading-loose min:leading-relaxed mt-4'>
                 It also remains to be seen whether this ends up being a level-based game like Mario or Celeste, or more of a metroidvania
                 type of thing that&apos;s more story-driven, assuming I continue working on it.
               </p>
@@ -97,7 +97,7 @@ const Game = () => {
                     transition duration-300 py-20 px-20 backdrop-blur z-10"
                 >
                   <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jan. 2020.</p>
-                  <p className="leading-loose">
+                  <p className="leading-loose min:leading-relaxed">
                     <span className="font-mono font-bold italic">am_snowpoint</span> is a 1v1 map meant to be used
                     with splewis&apos; &quot;multi1v1&quot; server plugin. The map is named snowpoint after the city from&nbsp;
                     <span className='italic'>Pokemon Diamond and Pearl</span>, which inspired the wintery research-site theme.
@@ -119,7 +119,7 @@ const Game = () => {
                     transition duration-300 py-20 px-20 backdrop-blur z-10"
                 >
                   <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Mar. 2020.</p>
-                  <p className="leading-loose">
+                  <p className="leading-loose min:leading-relaxed">
                     <span className='font-mono font-bold italic'>de_salisbury</span> is an unfinished map meant
                     for CS:GO&apos;s 2v2 &quot;Wingman&quot; mode, with one central bombsite. It&apos;s named after Salisbury, MA, a town
                     close to where I grew up. It also fits the coastal theme.

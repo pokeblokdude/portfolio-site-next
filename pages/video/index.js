@@ -45,13 +45,13 @@ const Video = () => {
                 }}
               >
                 <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Aug. 2021.</p>
-                <p className="leading-loose">
+                <p className="leading-loose min:leading-relaxed">
                   <span className="font-mono font-bold italic">Super Mario Galaxy - As Good as We Remember? </span> 
                   is a long-form video essay reflecting on and analyzing my experience playing the 2007 Nintendo game,
                   <span className="italic"> Super Mario Galaxy.</span> It covers everything from level design to graphics, 
                   sound and gameplay.
                 </p>
-                <p className="leading-loose mt-4">
+                <p className="leading-loose min:leading-relaxed mt-4">
                   Intended for release on YouTube, I tried to switch up the &quot;internet video essay 
                   formula&quot; by incorporating cinematics captured using &nbsp;
                   <Link href='https://noclip.website'><a target='_blank' className="font-semibold hover:underline">noclip.website,</a></Link>
@@ -140,7 +140,7 @@ const Video = () => {
                   }}
                 >
                   <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Nov. 2021.</p>
-                  <p className="leading-loose">
+                  <p className="leading-loose min:leading-relaxed">
                     <span className="font-mono font-bold italic">Fear.</span> was a project for ART 374 - 
                     Intro Computer Animation at UMass Amherst. 
                     Using Autodesk Maya, the assignment was to pick one of four moods, and express it using
@@ -163,7 +163,7 @@ const Video = () => {
                   }}
                 >
                   <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jul. 2021.</p>
-                  <p className="leading-loose">
+                  <p className="leading-loose min:leading-relaxed">
                     My girlfriend, my brother, his girlfriend and I took a trip to Westport, MA to visit 
                     family for the 4th of July. On the way home, we stopped at the beach during golden hour.
                     The video is set to music by <span className="italic">Kiefer.</span>
@@ -201,7 +201,7 @@ const Video = () => {
                 <Image src='/bg/bg-montage.png' layout='fill' className='object-cover object-left' alt='' quality={100} loading='eager'/>
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur z-10"
+                    transition duration-300 py-20 px-20 narrow:py-16 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=i-uUcVpfQXA');
                     setModalOpen(true);

@@ -67,13 +67,13 @@ const Film = () => {
                 <Image src='/bg/bg-gsp.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
                 <div
                   className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur z-10"
+                    transition duration-300 py-20 px-20 narrow:py-16 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=GzvWQ_fnKt0');
                     setModalOpen(true);
                   }}  
                 >
-                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Apr. 2018</p>
+                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Apr. 2018.</p>
                   <p className="leading-loose">
                     <span className="font-mono font-bold italic">G.S.P.</span> 
                     &nbsp;was a short film I did for my high school senior project, inspired primarily by 
@@ -90,7 +90,7 @@ const Film = () => {
                 <Image src='/bg/bg-timelapse.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur z-10"
+                    transition duration-300 py-20 px-20 narrow:py-16 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=RWq_bcAp9As');
                     setModalOpen(true);
