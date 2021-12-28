@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import Footer from '../../components/Footer'
 
 const Code = () => {
@@ -15,11 +16,12 @@ const Code = () => {
         <div className="flex flex-col w-full items-center">
           <h2 className="w-[95%] pl-1 mb-4 font-mono">00. UKG Job Referral Tool</h2>
           <div 
-            className='w-[95%] flex flex-col justify-center items-center bg-ukg bg-cover bg-top h-[480px]'
+            className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
           >
+            <Image src='/bg/bg-ukg.PNG' layout='fill' className='object-cover object-top' alt='' priority={true} loading='eager' quality={100}/>
             <div
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur"
+                transition duration-300 py-20 px-40 backdrop-blur z-10"
             >
               <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2021.</p>
               <p className="leading-relaxed">
@@ -53,11 +55,12 @@ const Code = () => {
         <div className="flex flex-col w-full items-center mt-10">
           <h2 className="w-[95%] pl-1 mb-4 font-mono">01. Our House Bot</h2>
           <div 
-            className='w-[95%] flex flex-col justify-center items-center bg-ourhousebot bg-cover bg-top h-[640px]'
+            className='w-[95%] flex flex-col justify-center items-center h-[640px] relative'
           >
+            <Image src='/bg/bg-ourhousebot.PNG' layout='fill' className='object-cover object-top' alt='' priority={true} loading='eager' quality={100}/>
             <div
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur"
+                transition duration-300 py-20 px-40 backdrop-blur z-10"
             >
               <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2020.</p>
               <p className="leading-relaxed">

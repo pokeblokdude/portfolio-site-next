@@ -2,6 +2,7 @@ import ReactPlayer from "react-player/youtube"
 import Modal from 'react-modal'
 import React from 'react'
 import Head from 'next/head'
+import Image from "next/image"
 import { MdFullscreen } from 'react-icons/md'
 import Footer from "../../components/Footer"
 
@@ -31,11 +32,12 @@ const Film = () => {
           <div className="flex flex-col w-full items-center">
             <h2 className="w-[95%] pl-1 mb-4 font-mono">00. The Machine</h2>
             <div 
-              className='w-[95%] flex flex-col justify-center items-center bg-the-machine bg-cover bg-center h-[480px]'
+              className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
             >
+              <Image src='/bg/bg-the-machine.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
               <div
                 className="w-full h-full flex flex-col bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-20 px-40 backdrop-blur"
+                  transition duration-300 py-20 px-40 backdrop-blur z-10"
                 onClick={() => {
                   setVideoUrl('https://www.youtube.com/watch?v=l0_MGz5IqvY');
                   setModalOpen(true);
@@ -61,10 +63,11 @@ const Film = () => {
           <div className="flex w-[95%] mt-8">
             <div className="w-1/2 flex flex-col">
               <h2 className="w-full pl-1 mb-4 font-mono">01. Global Singularity Project</h2>
-              <div className='full flex justify-center items-center bg-gsp bg-cover bg-center h-[360px]'>
+              <div className='full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-gsp.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
                 <div
                   className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=GzvWQ_fnKt0');
                     setModalOpen(true);
@@ -83,10 +86,11 @@ const Film = () => {
             </div>
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">02. A Time-Lapse Journey through 2016</h2>
-              <div className='w-full flex justify-center items-center bg-timelapse bg-cover bg-center h-[360px]'>
+              <div className='w-full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-timelapse.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=RWq_bcAp9As');
                     setModalOpen(true);
@@ -112,7 +116,8 @@ const Film = () => {
           style={{
             overlay: {
               backgroundColor: 'hsla(0, 0%, 0%, 0.6)',
-              backdropFilter: 'blur(4px)'
+              backdropFilter: 'blur(4px)',
+              zIndex: '20'
             },
             content: {
               padding: '0px',

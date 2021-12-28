@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import React from 'react'
 import Footer from '../../components/Footer'
 
@@ -15,11 +16,12 @@ const Game = () => {
         <div className="flex flex-col w-full items-center">
           <h2 className="w-[95%] pl-1 mb-4 font-mono">00. &quot;Odyssey 2D&quot;</h2>
           <div 
-            className='w-[95%] flex flex-col justify-center items-center bg-odyssey2d bg-cover bg-bottom h-[540px]'
+            className='w-[95%] flex flex-col justify-center items-center h-[540px] relative'
           >
+            <Image src='/bg/bg-odyssey2d.jpg' layout='fill' className='object-cover object-bottom' alt='' priority={true} loading='eager' quality={100}/>
             <div
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur"
+                transition duration-300 py-20 px-40 backdrop-blur z-10"
             >
               <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
               <p className="leading-loose">
@@ -54,11 +56,12 @@ const Game = () => {
         <div className="flex flex-col w-full items-center mt-10">
           <h2 className="w-[95%] pl-1 mb-4 font-mono">01. Golf Game</h2>
           <div 
-            className='w-[95%] flex flex-col justify-center items-center bg-golf bg-cover bg-center h-[540px]'
+            className='w-[95%] flex flex-col justify-center items-center h-[540px] relative'
           >
+            <Image src='/bg/bg-golf.jpg' layout='fill' className='object-cover object-center' alt='' priority={true} loading='eager' quality={100}/>
             <div
               className="w-full h-full bg-black/80 opacity-0 hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur"
+                transition duration-300 py-20 px-40 backdrop-blur z-10"
             >
               <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
               <p className="leading-loose">
@@ -87,10 +90,11 @@ const Game = () => {
         <div className="flex w-[95%] self-center">
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">00. am_snowpoint</h2>
-              <div className='w-full flex justify-center items-center bg-snowpoint bg-cover bg-center h-[360px]'>
+              <div className='w-full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-snowpoint.jpg' layout='fill' className='object-cover object-center' alt='' loading='eager' />
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                 >
                   <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jan. 2020.</p>
                   <p className="leading-loose">
@@ -108,10 +112,11 @@ const Game = () => {
             </div>
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">01. de_salisbury</h2>
-              <div className='w-full flex justify-center items-center bg-salisbury bg-cover bg-center h-[360px]'>
+              <div className='w-full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-salisbury.jpg' layout='fill' className='object-cover object-center' alt=''/>
                 <div
                   className="w-full h-full bg-black/70 opacity-0 hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                 >
                   <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Mar. 2020.</p>
                   <p className="leading-loose">

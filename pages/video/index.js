@@ -2,6 +2,7 @@ import ReactPlayer from "react-player/youtube"
 import Modal from 'react-modal'
 import React from 'react'
 import Head from "next/head"
+import Image from "next/image"
 import Footer from "../../components/Footer"
 import Link from "next/link"
 
@@ -32,11 +33,12 @@ const Video = () => {
           <div className="flex flex-col w-full items-center">
             <h2 className="w-[95%] pl-1 mb-4 font-mono">00. Super Mario Galaxy - As Good as We Remember?</h2>
             <div 
-              className='w-[95%] flex flex-col justify-center items-center bg-smg bg-cover bg-center h-[480px]'
+              className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
             >
+              <Image src='/bg/bg-smg.png' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
               <div
                 className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-20 px-40 backdrop-blur"
+                  transition duration-300 py-20 px-40 backdrop-blur z-10"
                 onClick={() => {
                   setVideoUrl('https://youtu.be/OSq1M7QD2wM');
                   setModalOpen(true);
@@ -65,11 +67,12 @@ const Video = () => {
           <div className="flex flex-col w-full items-center mt-8">
             <h2 className="w-[95%] pl-1 mb-4 font-mono">01. CS:GO - Zeitgeist</h2>
             <div 
-              className='w-[95%] flex flex-col justify-center items-center bg-csgo bg-cover bg-center h-[480px]'
+              className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
             >
+              <Image src='/bg/bg-csgo.png' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
               <div
                 className="w-full h-full bg-black/70 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-20 px-40 backdrop-blur"
+                  transition duration-300 py-20 px-40 backdrop-blur z-10"
                 onClick={() => {
                   setVideoUrl('https://youtu.be/wuCA8XTfaSg');
                   setModalOpen(true);
@@ -94,11 +97,12 @@ const Video = () => {
           <div className="flex flex-col w-full items-center mt-8">
             <h2 className="w-[95%] pl-1 mb-4 font-mono">02. Senior Class Trip to Puerto Rico</h2>
             <div 
-              className='w-[95%] flex flex-col justify-center items-center bg-pr bg-cover bg-center h-[480px]'
+              className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
             >
+              <Image src='/bg/bg-pr.jpg' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
               <div
                 className="w-full h-full bg-black/70 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-20 px-40 backdrop-blur"
+                  transition duration-300 py-20 px-40 backdrop-blur z-10"
                 onClick={() => {
                   setVideoUrl('https://www.youtube.com/watch?v=b9i07oCLcPc');
                   setModalOpen(true);
@@ -125,10 +129,11 @@ const Video = () => {
           <div className="flex w-[95%] mt-8">
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">03. Fear.</h2>
-              <div className='w-full flex justify-center items-center bg-fear bg-cover bg-center h-[360px]'>
+              <div className='w-full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-fear.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=gqf0c0gtD24');
                     setModalOpen(true);
@@ -147,10 +152,11 @@ const Video = () => {
             </div>
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">04. July 4th - Trip to Westport</h2>
-              <div className='w-full flex justify-center items-center bg-westport bg-cover bg-center h-[360px]'>
+              <div className='w-full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-westport.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=WfKDOfYlOGY');
                     setModalOpen(true);
@@ -170,10 +176,11 @@ const Video = () => {
           <div className="flex w-[95%] mt-8">
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">05. Adventure at Amethyst Brook</h2>
-              <div className='w-full flex justify-center items-center bg-amethyst bg-cover bg-center h-[360px]'>
+              <div className='w-full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-amethyst.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
                 <div
                   className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=VqklE9kNjbQ');
                     setModalOpen(true);
@@ -190,10 +197,11 @@ const Video = () => {
             </div>
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">06. Montage</h2>
-              <div className='w-full flex justify-center items-center bg-montage bg-cover bg-center h-[360px]'>
+              <div className='w-full flex justify-center items-center h-[360px] relative'>
+                <Image src='/bg/bg-montage.png' layout='fill' className='object-cover object-left' alt='' quality={100} loading='eager'/>
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-20 px-20 backdrop-blur"
+                    transition duration-300 py-20 px-20 backdrop-blur z-10"
                   onClick={() => {
                     setVideoUrl('https://www.youtube.com/watch?v=i-uUcVpfQXA');
                     setModalOpen(true);
@@ -220,7 +228,8 @@ const Video = () => {
         style={{
           overlay: {
             backgroundColor: 'hsla(0, 0%, 0%, 0.6)',
-            backdropFilter: 'blur(4px)'
+            backdropFilter: 'blur(4px)',
+            zIndex: '20'
           },
           content: {
             padding: '0px',

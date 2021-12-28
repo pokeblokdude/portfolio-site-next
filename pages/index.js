@@ -30,11 +30,12 @@ export default function Home() {
         <div className="flex flex-col w-[95%] items-center">
           <h2 className="w-full pl-1 mb-4 font-mono">Super Mario Galaxy - As Good as We Remember?</h2>
           <div 
-            className='w-full flex flex-col justify-center items-center bg-smg bg-cover bg-center h-[360px]'
+            className='w-full flex flex-col justify-center items-center h-[360px] relative'
           >
+            <Image src='/bg/bg-smg.png' layout='fill' className='object-cover object-center pointer-events-none' alt=''/>
             <div
               className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                transition duration-300 py-16 px-40 backdrop-blur flex flex-col"
+                transition duration-300 py-16 px-40 backdrop-blur flex flex-col z-10"
               onClick={() => {
                 setVideoUrl('https://youtu.be/OSq1M7QD2wM');
                 setModalOpen(true);
@@ -64,11 +65,12 @@ export default function Home() {
           <div className="flex flex-col w-1/2 items-center">
             <h2 className="w-full pl-1 mb-4 font-mono">UKG Job Referral Tool</h2>
             <div 
-              className='w-full flex flex-col justify-center items-center bg-ukg bg-cover bg-top h-[300px]'
+              className='w-full flex flex-col justify-center items-center h-[300px] relative'
             >
+              <Image src='/bg/bg-ukg.PNG' layout='fill' className='object-cover object-top' alt=''/>
               <div
                 className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-16 px-20 backdrop-blur flex flex-col"
+                  transition duration-300 py-16 px-20 backdrop-blur flex flex-col z-10"
               >
                 <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2021.</p>
                 <p className="leading-relaxed w-full max-w-[600px] self-center">
@@ -90,11 +92,12 @@ export default function Home() {
           <div className="flex flex-col w-1/2 items-center">
             <h2 className="w-full pl-1 mb-4 font-mono">Odyssey 2D</h2>
             <div 
-              className='w-full flex flex-col justify-center items-center bg-odyssey2d bg-cover bg-bottom h-[300px]'
+              className='w-full flex flex-col justify-center items-center h-[300px] relative'
             >
+              <Image src='/bg/bg-odyssey2d.jpg' layout='fill' className='object-cover object-bottom' alt=''/>
               <div
                 className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all
-                  transition duration-300 py-16 px-20 backdrop-blur"
+                  transition duration-300 py-16 px-20 backdrop-blur z-10"
               >
                 <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
                 <p className="leading-relaxed">
@@ -132,7 +135,8 @@ export default function Home() {
         style={{
           overlay: {
             backgroundColor: 'hsla(0, 0%, 0%, 0.6)',
-            backdropFilter: 'blur(4px)'
+            backdropFilter: 'blur(4px)',
+            zIndex: '20'
           },
           content: {
             padding: '0px',
