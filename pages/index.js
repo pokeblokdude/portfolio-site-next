@@ -119,7 +119,7 @@ export default function Home() {
           <hr className='w-full border-dotted mb-2'></hr>
           <div className='flex justify-between'>
             <p className=''>Contact</p>
-            <div className='flex w-2/5 justify-between'>
+            <div className='flex w-2/5 min:w-1/2 justify-between'>
               <p className='font-mono font-light text-sm'>email: howie242000@gmail.com</p>
               <p className='font-mono font-light text-sm'>discord: Alex#5039</p>
             </div>
@@ -142,14 +142,20 @@ export default function Home() {
             padding: '0px',
             border: '1px solid hsl(0, 0%, 20%)',
             background: 'hsl(0, 0%, 5%)',
-            top: '150px',
+            //top: '150px',
             bottom: '150px',
-            left: '100px',
-            right: '100px'
+            //left: '100px',
+            right: '100px',
+            height: 'fit-content',
+            maxWidth: '1920px',
+            minWidth: '900px',
+            left: '40%',
+            top: '50%',
+            transform: 'translate(-32%, -50%)'
           }
         }}
       >
-        <div className="w-full h-full">
+        <div className="aspect-video">
           <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
         </div>
       </Modal>

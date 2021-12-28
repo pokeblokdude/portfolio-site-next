@@ -123,14 +123,20 @@ const Film = () => {
               padding: '0px',
               border: '1px solid hsl(0, 0%, 20%)',
               background: 'hsl(0, 0%, 5%)',
-              top: '150px',
+              //top: '150px',
               bottom: '150px',
-              left: '100px',
-              right: '100px'
+              //left: '100px',
+              right: '100px',
+              height: 'fit-content',
+              maxWidth: '1920px',
+              minWidth: '900px',
+              left: '40%',
+              top: '50%',
+              transform: 'translate(-32%, -50%)'
             }
           }}
         >
-          <div className="w-full h-full">
+          <div className="aspect-video">
             <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
           </div>
         </Modal>
