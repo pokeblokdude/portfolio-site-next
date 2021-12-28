@@ -41,6 +41,7 @@ const Film = () => {
                   setModalOpen(true);
                 }}
               >
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2018.</p>
                 <p className="leading-loose"><span className="font-bold italic font-mono">The Machine</span> was my final project for 
                   VM120 - Foundations in Media Arts Production at Emerson College. 
                   It&apos;s a psychological-horror-themed short film about a young man coming to terms with the future, 
@@ -69,13 +70,14 @@ const Film = () => {
                     setModalOpen(true);
                   }}  
                 >
+                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Apr. 2018</p>
                   <p className="leading-loose">
                     <span className="font-mono font-bold italic">G.S.P.</span> 
                     &nbsp;was a short film I did for my high school senior project, inspired primarily by 
                     Denis Villenueve&apos;s <span className="italic">Blade Runner 2049. G.S.P.</span> was my first short film;
                     I wrote, directed, shot and edited it. The music is by Caleb Kennedy.
                   </p>
-                  <p className="text-sm text-neutral-400 font-mono mt-10">Click to view.</p>
+                  <p className="text-sm text-neutral-400 font-mono mt-6">Click to view.</p>
                 </div>
               </div>
             </div>
@@ -90,12 +92,13 @@ const Film = () => {
                     setModalOpen(true);
                   }}
                 >
+                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jan. 2017.</p>
                   <p className="leading-loose">
                     <span className="font-mono font-bold italic">A Time-Lapse Journey through 2016 </span>was the 
                     project that got me into film. Using my first DSLR camera, I shot various landscapes around my home
                     in western Massachusetts. The film is set to music from C418&apos;s <span className="italic">Minecraft - Volume Beta.</span>
                   </p>
-                  <p className="text-sm text-neutral-400 font-mono mt-8">Click to view.</p>
+                  <p className="text-sm text-neutral-400 font-mono mt-6">Click to view.</p>
                 </div>
               </div>
             </div>

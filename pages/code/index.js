@@ -21,6 +21,7 @@ const Code = () => {
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
                 transition duration-300 py-20 px-40 backdrop-blur"
             >
+              <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2021.</p>
               <p className="leading-relaxed">
                 <span className='font-mono font-bold italic'>Job Referral Tool</span> &nbsp;was a semester-long project
                 for CS320 - Software Engineering at UMass Amherst. Students were split into teams of 10, each with a student manager
@@ -58,6 +59,7 @@ const Code = () => {
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
                 transition duration-300 py-20 px-40 backdrop-blur"
             >
+              <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2020.</p>
               <p className="leading-relaxed">
                 <span className='font-mono font-bold italic'>Our House Bot</span> &nbsp;is a Discord bot I created for
                 me and my friends&apos; private server. I started the project as a way to practice the JavaScript principles
@@ -104,9 +106,10 @@ const Code = () => {
         </div>
 
         <div className='w-[95%] flex flex-col self-center mt-10'>
-          <h2 className="pl-1 mb-4 font-mono">02. This Website :)</h2>
+          <h2 className="pl-1 font-mono">02. This Website :)</h2>
+          <p className="text-sm text-neutral-400 font-mono mb-2 ml-4 mt-2 w-full max-w-[1366px] self-center">Dec. 2021.</p>
           <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
-            <a target='_blank' className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px] w-fit text-neutral-300'>View source on GitHub.</a>
+            <a target='_blank' className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px] w-fit text-neutral-400'>View source on GitHub.</a>
           </Link>
         </div>
       </div>

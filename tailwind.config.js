@@ -27,7 +27,7 @@ module.exports = {
         'salisbury': 'url(~/img/bg-salisbury.jpg)'
       },
       screens: {
-        'tall': { 'raw': '(min-height: 1240px)' }
+        'tall': { 'raw': '(min-height: 1280px)' }
       }
     },
   },

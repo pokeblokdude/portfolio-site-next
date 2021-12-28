@@ -20,12 +20,12 @@ export default function Home() {
       <Head>
         <title>Alex Howe</title>
       </Head>
-      <div className="flex w-full h-[256px] relative items-center">
+      <div className="flex w-full h-[273px] relative items-center">
           <Image src='/photo/moon.jpg' layout='fill' objectFit='cover' alt='Moon' quality={100}/>
       </div>
-      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col items-center mb-10">
+      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col items-center mb-4">
         
-        <h1 className="text-2xl font-semibold mt-8 mb-4">Recent Projects</h1>
+        <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
 
         <div className="flex flex-col w-[95%] items-center">
           <h2 className="w-full pl-1 mb-4 font-mono">Super Mario Galaxy - As Good as We Remember?</h2>
@@ -34,12 +34,13 @@ export default function Home() {
           >
             <div
               className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                transition duration-300 py-20 px-40 backdrop-blur flex flex-col"
+                transition duration-300 py-16 px-40 backdrop-blur flex flex-col"
               onClick={() => {
                 setVideoUrl('https://youtu.be/OSq1M7QD2wM');
                 setModalOpen(true);
               }}
             >
+              <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Aug. 2021.</p>
               <p className="leading-relaxed max-w-[1366px] self-center">
                 <span className="font-mono font-bold italic">Super Mario Galaxy - As Good as We Remember? </span> 
                 is a long-form video essay reflecting on and analyzing my experience playing the 2007 Nintendo game,
@@ -67,8 +68,9 @@ export default function Home() {
             >
               <div
                 className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-20 px-20 backdrop-blur flex flex-col"
+                  transition duration-300 py-16 px-20 backdrop-blur flex flex-col"
               >
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2021.</p>
                 <p className="leading-relaxed w-full max-w-[600px] self-center">
                   <span className='font-mono font-bold italic'>Job Referral Tool</span> &nbsp;was a semester-long project
                   for CS320 - Software Engineering at UMass Amherst. Students were split into teams of 10, each tasked with
@@ -85,11 +87,42 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex w-1/2 h-[300px] relative items-center">
-            <Image src='/photo/moon.jpg' layout='fill' objectFit='cover' alt='Moon'/>
+          <div className="flex flex-col w-1/2 items-center">
+            <h2 className="w-full pl-1 mb-4 font-mono">Odyssey 2D</h2>
+            <div 
+              className='w-full flex flex-col justify-center items-center bg-odyssey2d bg-cover bg-bottom h-[300px]'
+            >
+              <div
+                className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all
+                  transition duration-300 py-16 px-20 backdrop-blur"
+              >
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
+                <p className="leading-relaxed">
+                  <span className='font-mono font-bold italic'>Odyssey 2D</span> &nbsp;is a 2D platformer with
+                  acceleration-based movement. The player can walk, crouch, jump (variable height), 
+                  wall-slide, wall-jump, ledge-grab and air-dive. All of this was implemented using a finite state machine.
+                </p>
+                <div className='mt-4 flex'>
+                  <Link href='https://github.com/pokeblokdude/2d-game'>
+                    <a target='_blank' className="text-sm text-neutral-400 font-mono hover:underline hover:cursor-pointer">View source on GitHub.</a>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
+        <div className='flex flex-col w-[95%] self-center mt-6'>
+          <hr className='w-full border-dotted mb-2'></hr>
+          <div className='flex justify-between'>
+            <p className=''>Contact</p>
+            <div className='flex w-2/5 justify-between'>
+              <p className='font-mono font-light text-sm'>email: howie242000@gmail.com</p>
+              <p className='font-mono font-light text-sm'>discord: Alex#5039</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <Modal
@@ -116,7 +149,7 @@ export default function Home() {
           <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
         </div>
       </Modal>
-      <Footer sticky={false}/>
+      <Footer sticky={true}/>
     </>
   )
 }

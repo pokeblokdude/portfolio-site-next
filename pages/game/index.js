@@ -13,7 +13,7 @@ const Game = () => {
         <h1 className="text-2xl font-semibold w-[95%] self-center mt-10 mb-6">Game Prototypes</h1>
         
         <div className="flex flex-col w-full items-center">
-          <h2 className="w-[95%] pl-1 mb-4 font-mono">&quot;Odyssey 2D&quot;</h2>
+          <h2 className="w-[95%] pl-1 mb-4 font-mono">00. &quot;Odyssey 2D&quot;</h2>
           <div 
             className='w-[95%] flex flex-col justify-center items-center bg-odyssey2d bg-cover bg-bottom h-[540px]'
           >
@@ -21,6 +21,7 @@ const Game = () => {
               className="w-full h-full bg-black/90 opacity-0 hover:opacity-100 hover:transition-all 
                 transition duration-300 py-20 px-40 backdrop-blur"
             >
+              <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
               <p className="leading-loose">
                 <span className='font-mono font-bold italic'>Odyssey 2D</span> &nbsp;is a 2D platformer with
                 acceleration-based movement. The original idea was to try and remake the base movement mechanics 
@@ -51,7 +52,7 @@ const Game = () => {
           </div>
         </div>
         <div className="flex flex-col w-full items-center mt-10">
-          <h2 className="w-[95%] pl-1 mb-4 font-mono">Golf Game</h2>
+          <h2 className="w-[95%] pl-1 mb-4 font-mono">01. Golf Game</h2>
           <div 
             className='w-[95%] flex flex-col justify-center items-center bg-golf bg-cover bg-center h-[540px]'
           >
@@ -59,6 +60,7 @@ const Game = () => {
               className="w-full h-full bg-black/80 opacity-0 hover:opacity-100 hover:transition-all 
                 transition duration-300 py-20 px-40 backdrop-blur"
             >
+              <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">2021.</p>
               <p className="leading-loose">
                 <span className='font-mono font-bold italic'>Golf Game</span> &nbsp;is a prototype 
                 isometric mini-golf game inspired by <span className='italic'>Golf with your Friends.</span>
@@ -84,12 +86,13 @@ const Game = () => {
 
         <div className="flex w-[95%] self-center">
             <div className="flex flex-col w-1/2">
-              <h2 className="w-full pl-1 mb-4 font-mono">am_snowpoint</h2>
+              <h2 className="w-full pl-1 mb-4 font-mono">00. am_snowpoint</h2>
               <div className='w-full flex justify-center items-center bg-snowpoint bg-cover bg-center h-[360px]'>
                 <div
                   className="w-full h-full bg-black/50 opacity-0 hover:opacity-100 hover:transition-all 
                     transition duration-300 py-20 px-20 backdrop-blur"
                 >
+                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jan. 2020.</p>
                   <p className="leading-loose">
                     <span className="font-mono font-bold italic">am_snowpoint</span> is a 1v1 map meant to be used
                     with splewis&apos; &quot;multi1v1&quot; server plugin. The map is named snowpoint after the city from&nbsp;
@@ -104,12 +107,13 @@ const Game = () => {
               </div>
             </div>
             <div className="flex flex-col w-1/2">
-              <h2 className="w-full pl-1 mb-4 font-mono">de_salisbury</h2>
+              <h2 className="w-full pl-1 mb-4 font-mono">01. de_salisbury</h2>
               <div className='w-full flex justify-center items-center bg-salisbury bg-cover bg-center h-[360px]'>
                 <div
                   className="w-full h-full bg-black/70 opacity-0 hover:opacity-100 hover:transition-all 
                     transition duration-300 py-20 px-20 backdrop-blur"
                 >
+                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Mar. 2020.</p>
                   <p className="leading-loose">
                     <span className='font-mono font-bold italic'>de_salisbury</span> is an unfinished map meant
                     for CS:GO&apos;s 2v2 &quot;Wingman&quot; mode, with one central bombsite. It&apos;s named after Salisbury, MA, a town
