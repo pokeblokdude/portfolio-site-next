@@ -20,7 +20,11 @@ module.exports = {
         'amethyst': 'url(~/img/bg-amethyst.png)',
         'montage': 'url(~/img/bg-montage.png)',
         'ukg': 'url(~/img/bg-ukg.PNG)',
-        'ourhousebot': 'url(~/img/bg-ourhousebot.PNG)'
+        'ourhousebot': 'url(~/img/bg-ourhousebot.PNG)',
+        'odyssey2d': 'url(~/img/bg-odyssey2d.jpg)',
+        'golf': 'url(~/img/bg-golf.jpg)',
+        'snowpoint': 'url(~/img/bg-snowpoint.jpg)',
+        'salisbury': 'url(~/img/bg-salisbury.jpg)'
       },
       screens: {
         'tall': { 'raw': '(min-height: 1240px)' }
