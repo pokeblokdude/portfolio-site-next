@@ -9,7 +9,7 @@ const Reel = () => {
       <Head>
         <title>Reel | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col mb-20">
 
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Reel</h1>
 
@@ -17,7 +17,7 @@ const Reel = () => {
           <ReactPlayer url='https://youtu.be/vifiwWY8VtY' width='100%' height='100%' controls={true}/>
         </div>
       </div>
-      <Footer sticky={true}/>
+      <Footer/>
     </>
   );
 };

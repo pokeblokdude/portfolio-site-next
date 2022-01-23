@@ -25,7 +25,7 @@ const Video = () => {
       <Head>
         <title>Videos | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col mb-20">
 
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Videos</h1>
 
@@ -252,7 +252,7 @@ const Video = () => {
           <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
         </div>
       </Modal>
-      <Footer sticky={false}/>
+      <Footer />
     </>
   )
 }

@@ -24,7 +24,7 @@ const Film = () => {
       <Head>
         <title>Films | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col mb-20">
 
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Films</h1>
 
@@ -50,7 +50,7 @@ const Film = () => {
                   inspired by some of the darker episodes of 
                   <span className="italic"> Doctor Who</span> and <span className="italic">Black Mirror.</span>
                 </p>
-                <p className="leading-loose mt-8">
+                <p className="leading-loose mt-6">
                   I wrote, directed, shot and edited the film. It was written over Thanksgiving break and shot at 
                   my house the next weekend. The music is by my good friend, Caleb Kennedy.
                 </p>
@@ -142,7 +142,7 @@ const Film = () => {
         </Modal>
 
       </div>
-      <Footer sticky={true}/>
+      <Footer/>
     </>
   )
 }

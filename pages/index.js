@@ -28,7 +28,7 @@ export default function Home() {
       <div className="flex w-full h-[273px] relative items-center">
           <Image src='/photo/moon.jpg' layout='fill' objectFit='cover' alt='Moon' quality={100}/>
       </div>
-      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col items-center mb-4">
+      <div className="w-full max-w-[1366px] flex flex-col items-center mb-4">
         
         <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
 
@@ -122,9 +122,9 @@ export default function Home() {
         
         <div className='flex flex-col w-[95%] self-center mt-6'>
           <hr className='w-full border-dotted mb-2'></hr>
-          <div className='flex justify-between'>
+          <div className='flex justify-between mobile:flex-col'>
             <p className=''>Contact</p>
-            <div className='flex w-2/5 min:w-1/2 justify-between'>
+            <div className='flex w-2/5 min:w-1/2 justify-between mobile:flex-col mobile:w-full'>
               <p className='font-mono font-light text-sm'>email: howie242000@gmail.com</p>
               <p className='font-mono font-light text-sm'>discord: Alex#5039</p>
             </div>
@@ -164,7 +164,7 @@ export default function Home() {
           <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
         </div>
       </Modal>
-      <Footer sticky={true}/>
+      <Footer/>
     </>
   )
 }

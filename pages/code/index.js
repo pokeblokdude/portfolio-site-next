@@ -10,7 +10,7 @@ const Code = () => {
       <Head>
         <title>Code | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col mb-20">
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Code</h1>
         
         <div className="flex flex-col w-full items-center">
@@ -116,7 +116,7 @@ const Code = () => {
           </Link>
         </div>
       </div>
-      <Footer sticky={false}/>
+      <Footer/>
     </>
   )
 }

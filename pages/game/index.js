@@ -10,7 +10,7 @@ const Game = () => {
       <Head>
         <title>Game | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] min-w-[1080px] flex flex-col mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col mb-20">
         <h1 className="text-2xl font-semibold w-[95%] self-center mt-10 mb-6">Game Prototypes</h1>
         
         <div className="flex flex-col w-full items-center">
@@ -135,7 +135,7 @@ const Game = () => {
           </div>
 
       </div>
-      <Footer sticky={false} />
+      <Footer />
     </>
   )
 }

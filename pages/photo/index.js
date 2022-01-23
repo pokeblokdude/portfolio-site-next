@@ -10,7 +10,7 @@ const Photo = () => {
       <Head>
         <title>Photo | Alex Howe</title>
       </Head>
-      <div className="w-[1160px] flex flex-col mb-20 items-center">
+      <div className="w-[1160px] flex flex-col mb-20 items-center mobile:w-[95%]">
 
         <h1 className="text-2xl font-semibold w-full self-center mt-10">Photos</h1>
         <h2 className='w-full text-neutral-200'>See full-quality versions on&nbsp;
@@ -21,70 +21,70 @@ const Photo = () => {
         <h3 className='w-full mb-4 mt-2 text-sm text-neutral-400'>This page may take a few seconds to load.</h3>
 
         <div className='flex w-full justify-between items-center'>
-          <div className="flex w-full h-[773px] relative">
+          <div className="flex w-full h-[773px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/janna-telescope.jpg' layout='fill' className='object-contain' alt='' priority={true} loading='eager' quality={100}/>
           </div>
         </div>
-        <div className='flex w-full justify-between items-center'>
-          <div className="flex w-[850px] h-[550px] relative">
+        <div className='flex w-full justify-between items-center mobile:flex-col'>
+          <div className="flex w-[850px] h-[550px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/janna-projector-feet.jpg' layout='fill' className='object-contain' alt='' priority={true} loading='eager'/>
           </div>
-          <div className="flex w-[300px] h-[550px] relative">
+          <div className="flex w-[300px] h-[550px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/projector.jpg' layout='fill' className='object-contain' alt='' priority={true} loading='eager'/>
           </div>
         </div>
-        <div className='flex w-full justify-between items-center'>
-          <div className="flex w-[355px] h-[533px] relative">
+        <div className='flex w-full justify-between items-center mobile:flex-col'>
+          <div className="flex w-[355px] h-[533px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/nubs-portrait.jpg' layout='fill' className='object-contain' alt='' priority={true} loading='eager'/>
           </div>
-          <div className="flex w-[795px] h-[533px] relative items-center">
+          <div className="flex w-[795px] h-[533px] relative items-center mobile:min-h-fit mobile:w-full">
             <Image src='/photo/dragonfly.jpg' layout='fill' className='object-contain' alt='' priority={true} loading='eager' quality={100}/>
           </div>
         </div>
-        <div className='flex w-full justify-between items-center'>
-          <div className="flex w-[796px] h-[550px] relative items-center">
+        <div className='flex w-full justify-between items-center mobile:flex-col'>
+          <div className="flex w-[796px] h-[550px] relative items-center mobile:min-h-fit mobile:w-full">
             <Image src='/photo/elijah.jpg' layout='fill' className='object-contain' alt='' loading='eager' quality={100}/>
           </div>
-          <div className="flex w-[355px] h-[550px] relative">
+          <div className="flex w-[355px] h-[550px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/harrison-portrait.jpg' layout='fill' className='object-contain' alt='' loading='eager'/>
           </div>
         </div>
         <div className='flex w-full justify-between items-center'>
-          <div className="flex w-full h-[774px] relative">
+          <div className="flex w-full h-[774px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/light-trail.jpg' layout='fill' className='object-contain' alt='' loading='eager' quality={100}/>
           </div>
         </div>
         <div className='flex w-full justify-between items-center'>
-          <div className="flex w-full h-[790px] relative">
+          <div className="flex w-full h-[790px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/janna-window.jpg' layout='fill' className='object-contain' alt='' loading='eager' quality={100}/>
           </div>
         </div>
-        <div className='flex w-full justify-between items-center'>
-          <div className="flex w-[399px] h-[660px] relative">
+        <div className='flex w-full justify-between items-center mobile:flex-col'>
+          <div className="flex w-[399px] h-[660px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/caleb-bandmate.jpg' layout='fill' className='object-contain' alt='' loading='eager'/>
           </div>
-          <div className="flex w-[750px] h-[660px] relative items-center">
+          <div className="flex w-[750px] h-[660px] relative items-center mobile:min-h-fit mobile:w-full">
             <Image src='/photo/caleb-drums.jpg' layout='fill' className='object-contain' alt='' loading='eager' quality={100}/>
           </div>
         </div>
-        <div className='flex w-full justify-between items-center'>
-          <div className="flex w-[835px] h-[570px] relative items-center">
+        <div className='flex w-full justify-between items-center mobile:flex-col'>
+          <div className="flex w-[835px] h-[570px] relative items-center mobile:min-h-fit mobile:w-full">
             <Image src='/photo/moon.jpg' layout='fill' className='object-contain' alt='' loading='eager' quality={100}/>
           </div>
-          <div className="flex w-[314px] h-[570px] relative">
+          <div className="flex w-[314px] h-[570px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/stones.jpg' layout='fill' className='object-contain' alt='' loading='eager'/>
           </div>
         </div>
         <div className='flex w-full justify-between items-center'>
-          <div className="flex w-full h-[936px] relative">
+          <div className="flex w-full h-[936px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/sign.jpg' layout='fill' className='object-contain' alt='' loading='eager' quality={100}/>
           </div>
         </div>
-        <div className='flex w-full justify-between items-center'>
-          <div className="flex w-[314px] h-[484px] relative">
+        <div className='flex w-full justify-between items-center mobile:flex-col'>
+          <div className="flex w-[314px] h-[484px] relative mobile:min-h-fit mobile:w-full">
             <Image src='/photo/dogs-1.jpg' layout='fill' className='object-contain' alt='' loading='eager' />
           </div>
-          <div className="flex w-[835px] h-[470px] relative items-center">
+          <div className="flex w-[835px] h-[470px] relative items-center mobile:min-h-fit mobile:w-full">
             <Image src='/photo/janna-forest.jpg' layout='fill' className='object-contain' alt='' loading='eager' quality={100}/>
           </div>
         </div>
@@ -235,7 +235,7 @@ const Photo = () => {
         </div>
 
       </div>
-      <Footer sticky={false}/>
+      <Footer/>
     </>
   )
 }
