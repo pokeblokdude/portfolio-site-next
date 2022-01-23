@@ -6,6 +6,11 @@ import React from 'react'
 import Modal from 'react-modal'
 import ReactPlayer from 'react-player'
 
+import {
+  MdArrowBackIosNew,
+  MdArrowForwardIos
+} from 'react-icons/md'
+
 export default function Home() {
   
   const [ modalOpen, setModalOpen ] = React.useState(false);
