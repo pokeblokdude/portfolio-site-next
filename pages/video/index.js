@@ -23,14 +23,98 @@ const Video = () => {
   return (
     <>
       <Head>
-        <title>Videos | Alex Howe</title>
+        <title>Film & Video | Alex Howe</title>
       </Head>
       <div className="w-full max-w-[1366px] flex flex-col mb-20">
 
-        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Videos</h1>
+      <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Films</h1>
 
-        <div className="flex flex-col items-center">
-          <div className="flex flex-col w-full items-center">
+      <div className="flex flex-col items-center">
+        <div className="flex flex-col w-full items-center">
+          <h2 className="w-[95%] pl-1 mb-4 font-mono">00. The Machine</h2>
+          <div 
+            className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
+          >
+            <Image src='/bg/bg-the-machine.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
+            <div
+              className="w-full h-full flex flex-col bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                transition duration-300 py-20 px-40 backdrop-blur z-10"
+              onClick={() => {
+                setVideoUrl('https://www.youtube.com/watch?v=l0_MGz5IqvY');
+                setModalOpen(true);
+              }}
+            >
+              <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Dec. 2018.</p>
+              <p className="leading-loose"><span className="font-bold italic font-mono">The Machine</span> was my final project for 
+                VM120 - Foundations in Media Arts Production at Emerson College. 
+                It&apos;s a psychological-horror-themed short film about a young man coming to terms with the future, 
+                inspired by some of the darker episodes of 
+                <span className="italic"> Doctor Who</span> and <span className="italic">Black Mirror.</span>
+              </p>
+              <p className="leading-loose mt-6">
+                I wrote, directed, shot and edited the film. It was written over Thanksgiving break and shot at 
+                my house the next weekend. The music is by my good friend, Caleb Kennedy.
+              </p>
+              
+              <p className="text-sm text-neutral-400 font-mono mt-10">Click to view.</p>
+            </div>
+            
+          </div>
+        </div>
+        <div className="flex w-[95%] mt-8">
+          <div className="w-1/2 flex flex-col">
+            <h2 className="w-full pl-1 mb-4 font-mono">01. Global Singularity Project</h2>
+            <div className='full flex justify-center items-center h-[360px] relative'>
+              <Image src='/bg/bg-gsp.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
+              <div
+                className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                  transition duration-300 py-20 px-20 narrow:py-16 backdrop-blur z-10"
+                onClick={() => {
+                  setVideoUrl('https://www.youtube.com/watch?v=GzvWQ_fnKt0');
+                  setModalOpen(true);
+                }}  
+              >
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Apr. 2018.</p>
+                <p className="leading-loose">
+                  <span className="font-mono font-bold italic">G.S.P.</span> 
+                  &nbsp;was a short film I did for my high school senior project, inspired primarily by 
+                  Denis Villenueve&apos;s <span className="italic">Blade Runner 2049. G.S.P.</span> was my first short film;
+                  I wrote, directed, shot and edited it. The music is by Caleb Kennedy.
+                </p>
+                <p className="text-sm text-neutral-400 font-mono mt-6">Click to view.</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col w-1/2">
+            <h2 className="w-full pl-1 mb-4 font-mono">02. A Time-Lapse Journey through 2016</h2>
+            <div className='w-full flex justify-center items-center h-[360px] relative'>
+              <Image src='/bg/bg-timelapse.jpeg' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
+              <div
+                className="w-full h-full bg-black/50 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                  transition duration-300 py-20 px-20 narrow:py-16 backdrop-blur z-10"
+                onClick={() => {
+                  setVideoUrl('https://www.youtube.com/watch?v=RWq_bcAp9As');
+                  setModalOpen(true);
+                }}
+              >
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jan. 2017.</p>
+                <p className="leading-loose">
+                  <span className="font-mono font-bold italic">A Time-Lapse Journey through 2016 </span>was the 
+                  project that got me into film. Using my first DSLR camera, I shot various landscapes around my home
+                  in western Massachusetts. The film is set to music from C418&apos;s <span className="italic">Minecraft - Volume Beta.</span>
+                </p>
+                <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Videos</h1>
+
+      <div className="flex flex-col items-center">
+
+        <div className="flex flex-col w-full items-center">
             <h2 className="w-[95%] pl-1 mb-4 font-mono">00. Super Mario Galaxy - As Good as We Remember?</h2>
             <div 
               className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
@@ -64,8 +148,43 @@ const Video = () => {
               </div>
             </div>
           </div>
+
+          <div className="flex flex-col w-full items-center">
+            <h2 className="w-[95%] pl-1 mb-4 font-mono mt-10">01. Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand</h2>
+            <div 
+              className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
+            >
+              <Image src='/bg/bg-smg2.png' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
+              <div
+                className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                  transition duration-300 py-20 px-40 backdrop-blur z-10"
+                onClick={() => {
+                  setVideoUrl('https://youtu.be/6hVOmstk7qs');
+                  setModalOpen(true);
+                }}
+              >
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jan. 2022.</p>
+                <p className="leading-loose min:leading-relaxed">
+                  <span className="font-mono font-bold italic">Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand </span> 
+                  is a follow-up to my previous video, <span className="italic">Super Mario Galaxy - As Good as We Remember?</span>
+                  &nbsp;This time I cover the game&apos;s sequel, <span className="italic"> Super Mario Galaxy 2,</span> and how it
+                  compares to the 2007 original, in terms of graphics, gameplay, music, etc. 
+                </p>
+                <p className="leading-loose min:leading-relaxed mt-4">
+                  I tried to keep this video tighter and more focused than the first, not going quite as in-depth on every
+                  minute detail, but rather grouping together more &quot;big-picture&quot; ideas to give more of an overview
+                  of my thoughts throughout the whole video, rather than just at the end.
+                </p>
+                <p className="leading-loose mt-4">
+                  I again used <Link href='https://noclip.website'><a target='_blank' className="font-semibold hover:underline">noclip.website</a></Link>
+                  &nbsp;to capture cinematics, and the video&apos;s sountrack is again comprised of music from the game.
+                </p>
+                <p className="text-sm text-neutral-400 font-mono mt-6">Click to view.</p>
+              </div>
+            </div>
+          </div>
           <div className="flex flex-col w-full items-center mt-8">
-            <h2 className="w-[95%] pl-1 mb-4 font-mono">01. CS:GO - Zeitgeist</h2>
+            <h2 className="w-[95%] pl-1 mb-4 font-mono">02. CS:GO - Zeitgeist</h2>
             <div 
               className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
             >
@@ -94,38 +213,7 @@ const Video = () => {
               
             </div>
           </div>
-          <div className="flex flex-col w-full items-center mt-8">
-            <h2 className="w-[95%] pl-1 mb-4 font-mono">02. Senior Class Trip to Puerto Rico</h2>
-            <div 
-              className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
-            >
-              <Image src='/bg/bg-pr.jpg' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
-              <div
-                className="w-full h-full bg-black/70 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                  transition duration-300 py-20 px-40 backdrop-blur z-10"
-                onClick={() => {
-                  setVideoUrl('https://www.youtube.com/watch?v=b9i07oCLcPc');
-                  setModalOpen(true);
-                }}
-              >
-                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jun. 2018.</p>
-                <p className="leading-loose">
-                  <span className="font-mono font-bold italic">Senior Class Trip to Puerto Rico</span> is a vlog-style documentation
-                  of my high school class&apos;s senior trip. We went to Puerto Rico in the wake of Hurricane Maria to help a local organiztion
-                  in building sustainable shelter/school buildings and gardens out of recycled materials and bamboo.
-                  
-                </p>
-                <p className="leading-loose mt-4">
-                  I was filming throughout the trip, and edited all the footage down,
-                  with the help of my good friend Harrison Tan, into this video. We used music that we listened to
-                  during the trip, with tracks from <span className="italic">Blue Swede, Raspberries, Redbone, The Jackson 5, Limes </span>
-                  and <span className="italic">Snarky Puppy.</span>
-                </p>
-                <p className="text-sm text-neutral-400 font-mono mt-8">Click to view.</p>
-              </div>
-              
-            </div>
-          </div>
+
           <div className="flex w-[95%] mt-8">
             <div className="flex flex-col w-1/2">
               <h2 className="w-full pl-1 mb-4 font-mono">03. Fear.</h2>
@@ -173,9 +261,43 @@ const Video = () => {
               </div>
             </div>
           </div>
+
+          <div className="flex flex-col w-full items-center mt-8">
+            <h2 className="w-[95%] pl-1 mb-4 font-mono">05. Senior Class Trip to Puerto Rico</h2>
+            <div 
+              className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
+            >
+              <Image src='/bg/bg-pr.jpg' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
+              <div
+                className="w-full h-full bg-black/70 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                  transition duration-300 py-20 px-40 backdrop-blur z-10"
+                onClick={() => {
+                  setVideoUrl('https://www.youtube.com/watch?v=b9i07oCLcPc');
+                  setModalOpen(true);
+                }}
+              >
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jun. 2018.</p>
+                <p className="leading-loose">
+                  <span className="font-mono font-bold italic">Senior Class Trip to Puerto Rico</span> is a vlog-style documentation
+                  of my high school class&apos;s senior trip. We went to Puerto Rico in the wake of Hurricane Maria to help a local organiztion
+                  in building sustainable shelter/school buildings and gardens out of recycled materials and bamboo.
+                  
+                </p>
+                <p className="leading-loose mt-4">
+                  I was filming throughout the trip, and edited all the footage down,
+                  with the help of my good friend Harrison Tan, into this video. We used music that we listened to
+                  during the trip, with tracks from <span className="italic">Blue Swede, Raspberries, Redbone, The Jackson 5, Limes </span>
+                  and <span className="italic">Snarky Puppy.</span>
+                </p>
+                <p className="text-sm text-neutral-400 font-mono mt-8">Click to view.</p>
+              </div>
+              
+            </div>
+          </div>
+          
           <div className="flex w-[95%] mt-8">
             <div className="flex flex-col w-1/2">
-              <h2 className="w-full pl-1 mb-4 font-mono">05. Adventure at Amethyst Brook</h2>
+              <h2 className="w-full pl-1 mb-4 font-mono">06. Adventure at Amethyst Brook</h2>
               <div className='w-full flex justify-center items-center h-[360px] relative'>
                 <Image src='/bg/bg-amethyst.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
                 <div
@@ -196,7 +318,7 @@ const Video = () => {
               </div>
             </div>
             <div className="flex flex-col w-1/2">
-              <h2 className="w-full pl-1 mb-4 font-mono">06. Montage</h2>
+              <h2 className="w-full pl-1 mb-4 font-mono">07. Montage</h2>
               <div className='w-full flex justify-center items-center h-[360px] relative'>
                 <Image src='/bg/bg-montage.png' layout='fill' className='object-cover object-left' alt='' quality={100} loading='eager'/>
                 <div

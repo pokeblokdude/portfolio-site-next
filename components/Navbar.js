@@ -9,12 +9,11 @@ const Navbar = () => {
         </div>
         <div className='flex w-[35%] max-w-[640px] justify-between items-center mr-5 mobile:mr-0 mobile:w-[80%] mobile:mt-2'>
           <Link href='/reel'><a>Reel</a></Link>
+          <Link href='/video'><a>Film & Video</a></Link>
+          <Link href='/photo'><a>Photo</a></Link>
           <p className='font-thin mb-1 mx-1 mobile:hidden'>|</p>
-          <Link href='/film'><a>Film</a></Link>
-          <Link href='/video'><a>Video</a></Link>
           <Link href='/game'><a>Game</a></Link>
           <Link href='/code'><a>Code</a></Link>
-          <Link href='/photo'><a>Photo</a></Link>
           <p className='font-thin mb-1 mx-1 mobile:hidden'>|</p>
           <Link href='https://www.youtube.com/channel/UCGPSDan8oaEvppSeaLNkofg'><a target='_blank' className='mobile:hidden'><FaYoutube/></a></Link>
           <Link href='https://github.com/pokeblokdude'><a target='_blank' className='mobile:hidden'><FaGithub/></a></Link>
