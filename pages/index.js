@@ -34,7 +34,7 @@ export default function Home() {
 
           <div className='w-[48%] h-full items-center flex flex-col mobile:w-[95%]'>
             <h1 className='w-[95%] text-2xl font-semibold mt-6 mb-4'>Bio</h1>
-            <div className='w-[90%] flex flex-col justify-center items-center h-[500px] relative ml-2 min:w-[95%] mobile:h-[700px] mobile:w-[90%] mobile:ml-0'>
+            <div className='w-[90%] flex flex-col justify-center items-center h-[500px] relative ml-2 mobile:h-[700px] mobile:w-[90%] mobile:ml-0'>
               <Image src='/me.jpg' layout='fill' className='object-cover object-top' alt='' priority={true} loading='eager' quality={100}/>
             </div>
             <h2 className="w-[90%] pl-1 mt-2 font-mono text-sm text-neutral-400">Me, playing disc golf</h2>
