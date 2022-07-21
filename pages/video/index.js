@@ -178,7 +178,7 @@ const Video = () => {
         </div>
 
         <div className="flex flex-col w-full items-center mt-8">
-          <h2 className="w-[95%] pl-1 mb-4 font-mono">00. Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand</h2>
+          <h2 className="w-[95%] pl-1 mb-4 font-mono">01. Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand</h2>
           <div 
             className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
           >
@@ -214,7 +214,7 @@ const Video = () => {
 
         <div className="flex w-[95%] mt-8">
           <div className="flex flex-col w-1/2">
-            <h2 className="w-full pl-1 mb-4 font-mono">01. Williams & Zimmer - The Story of Modern Film Music</h2>
+            <h2 className="w-full pl-1 mb-4 font-mono">02. Williams & Zimmer - The Story of Modern Film Music</h2>
             <div className='w-full flex justify-center items-center h-[360px] relative'>
               <Image src='/bg/bg-wz.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
               <div
@@ -237,7 +237,7 @@ const Video = () => {
             </div>
           </div>
           <div className="flex flex-col w-1/2">
-            <h2 className="w-full pl-1 mb-4 font-mono">02. Super Mario Galaxy - As Good as We Remember?</h2>
+            <h2 className="w-full pl-1 mb-4 font-mono">03. Super Mario Galaxy - As Good as We Remember?</h2>
             <div className='w-full flex justify-center items-center h-[360px] relative'>
               <Image src='/bg/bg-smg.png' layout='fill' className='object-cover object-right' alt='' quality={100} loading='eager'/>
               <div
@@ -265,7 +265,7 @@ const Video = () => {
         </div>
 
         <div className="flex flex-col w-full items-center mt-8">
-          <h2 className="w-[95%] pl-1 mb-4 font-mono">03. CS:GO - Zeitgeist</h2>
+          <h2 className="w-[95%] pl-1 mb-4 font-mono">04. CS:GO - Zeitgeist</h2>
           <div 
             className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
           >
@@ -297,7 +297,7 @@ const Video = () => {
 
         <div className="flex w-[95%] mt-8">
           <div className="flex flex-col w-1/2">
-            <h2 className="w-full pl-1 mb-4 font-mono">04. Fear.</h2>
+            <h2 className="w-full pl-1 mb-4 font-mono">05. Fear.</h2>
             <div className='w-full flex justify-center items-center h-[360px] relative'>
               <Image src='/bg/bg-fear.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
               <div
@@ -320,7 +320,7 @@ const Video = () => {
             </div>
           </div>
           <div className="flex flex-col w-1/2">
-            <h2 className="w-full pl-1 mb-4 font-mono">05. July 4th - Trip to Westport</h2>
+            <h2 className="w-full pl-1 mb-4 font-mono">06. July 4th - Trip to Westport</h2>
             <div className='w-full flex justify-center items-center h-[360px] relative'>
               <Image src='/bg/bg-westport.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
               <div
@@ -344,7 +344,7 @@ const Video = () => {
         </div>
 
         <div className="flex flex-col w-full items-center mt-8">
-          <h2 className="w-[95%] pl-1 mb-4 font-mono">06. Senior Class Trip to Puerto Rico</h2>
+          <h2 className="w-[95%] pl-1 mb-4 font-mono">07. Senior Class Trip to Puerto Rico</h2>
           <div 
             className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
           >
@@ -378,7 +378,7 @@ const Video = () => {
           
         <div className="flex w-[95%] mt-8">
           <div className="flex flex-col w-1/2">
-            <h2 className="w-full pl-1 mb-4 font-mono">07. Adventure at Amethyst Brook</h2>
+            <h2 className="w-full pl-1 mb-4 font-mono">08. Adventure at Amethyst Brook</h2>
             <div className='w-full flex justify-center items-center h-[360px] relative'>
               <Image src='/bg/bg-amethyst.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
               <div
@@ -399,7 +399,7 @@ const Video = () => {
             </div>
           </div>
           <div className="flex flex-col w-1/2">
-            <h2 className="w-full pl-1 mb-4 font-mono">08. Montage</h2>
+            <h2 className="w-full pl-1 mb-4 font-mono">09. Montage</h2>
             <div className='w-full flex justify-center items-center h-[360px] relative'>
               <Image src='/bg/bg-montage.png' layout='fill' className='object-cover object-left' alt='' quality={100} loading='eager'/>
               <div
