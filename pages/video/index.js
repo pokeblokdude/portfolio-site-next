@@ -27,6 +27,7 @@ const Video = () => {
       </Head>
       <div className="w-full max-w-[1366px] flex flex-col mb-20">
 
+{/* ============================================== FILMS ================================================================================= */}
       <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Films</h1>
 
       <div className="flex flex-col items-center">
@@ -141,11 +142,42 @@ const Video = () => {
         </div>
       </div>
 
+{/* ============================================== VIDEOS ================================================================================= */}
       <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Videos</h1>
 
       <div className="flex flex-col items-center">
 
-        <div className="flex flex-col w-full items-center">
+      <div className="flex flex-col w-full items-center">
+          <h2 className="w-[95%] pl-1 mb-4 font-mono">00. Passing By (Official Music Video)</h2>
+          <div 
+            className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
+          >
+            <Image src='/bg/bg-gruff.png' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
+            <div
+              className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                transition duration-300 py-20 px-40 backdrop-blur z-10"
+              onClick={() => {
+                setVideoUrl('https://youtu.be/TiyuKP6-zzI');
+                setModalOpen(true);
+              }}
+            >
+              <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jul. 2022.</p>
+              <p className="leading-loose min:leading-relaxed">
+                <span className="font-mono font-bold italic">Passing By </span> 
+                is a music video I shot for my friend Gruff Davies, who wrote and performed the song under his
+                artist name, <span className="italic">Suncaster.</span> Most footage in the video was shot at various locations 
+                around our home in western Massachusetts, with a few stock clips for the greenscreen section.
+              </p>
+              <p className="leading-loose min:leading-relaxed mt-4">
+                I directed, shot, edited, and color graded the video. I was going for kind of a retro vibe with the 
+                4:3 aspect ratio and heavy film grain and glow. Personally I think it looks really good.
+              </p>
+              <p className="text-sm text-neutral-400 font-mono mt-6">Click to view.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col w-full items-center mt-8">
           <h2 className="w-[95%] pl-1 mb-4 font-mono">00. Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand</h2>
           <div 
             className='w-[95%] flex flex-col justify-center items-center h-[480px] relative'
@@ -182,7 +214,7 @@ const Video = () => {
 
         <div className="flex w-[95%] mt-8">
           <div className="flex flex-col w-1/2">
-            <h2 className="w-full pl-1 mb-4 font-mono">01. Williams & Zimmer - A Story of Film Music</h2>
+            <h2 className="w-full pl-1 mb-4 font-mono">01. Williams & Zimmer - The Story of Modern Film Music</h2>
             <div className='w-full flex justify-center items-center h-[360px] relative'>
               <Image src='/bg/bg-wz.png' layout='fill' className='object-cover object-center' alt='' quality={100} loading='eager'/>
               <div
@@ -193,9 +225,9 @@ const Video = () => {
                   setModalOpen(true);
                 }}
               >
-                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jul. 2022.</p>
+                <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jun. 2022.</p>
                 <p className="leading-relaxed min:leading-normal">
-                  <span className="font-mono font-bold italic">Williams & Zimmer - A Story of Film Music</span> was a project for FILM-ST - 
+                  <span className="font-mono font-bold italic">Williams & Zimmer - A Story of Film Music</span> was a project for FILM-ST 360 - 
                   Music, Culture and the Moving Image at UMass Amherst. 
                   It&apos;s a video essay covering a bit of the history of film music, and compares the music of the two most influential composers, John Williams
                   and Hans Zimmer.

@@ -56,66 +56,62 @@ export default function Home() {
             <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
 
             <div className="flex flex-col w-full items-center">
-              <h2 className="w-full pl-1 mb-4 font-mono">Cataclysm</h2>
+              <h2 className="w-full pl-1 mb-4 font-mono">Passing By (Official Music Video)</h2>
               <div 
                 className='w-full flex flex-col justify-center items-center h-[300px] relative'
               >
-                <Image src='/bg/bg-cataclysm.jpg' layout='fill' className='object-cover object-center' alt='' priority={true} loading='eager' quality={100}/>
+                <Image src='/bg/bg-gruff.png' layout='fill' className='object-cover object-center' alt='' priority={true} loading='eager' quality={100}/>
                 <div
-                  className="w-full h-full bg-black/80 opacity-0 hover:opacity-100 hover:transition-all 
-                    transition duration-300 py-16 px-20 narrow:px-28 backdrop-blur z-10"
-                >
-                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Feb. 2022.</p>
+                    className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
+                      transition duration-300 py-16 px-20 backdrop-blur z-10"
+                    onClick={() => {
+                      setVideoUrl('https://youtu.be/TiyuKP6-zzI');
+                      setModalOpen(true);
+                    }}
+                  >
+                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jul. 2022.</p>
                   <p className="leading-loose min:leading-relaxed">
-                    <span className='font-mono font-bold italic'>Cataclysm</span> &nbsp;is a small game
-                    about a cat causing havoc. It was developed in 3 days by me and four of my friends, and submitted to&nbsp;
-                    <Link href='https://itch.io/jam/mini-jame-gam-7'>
-                      <a target='_blank' className='font-semibold hover:underline hover:cursor-pointer'>Mini Jame Gam #7,</a>
-                    </Link>
-                    &nbsp;with the theme, &quot;You Are the Enemy.&quot;
+                    <span className='font-mono font-bold italic'>Passing By </span> is a music video I shot for my friend Gruff Davies, 
+                    AKA, <span className="italic">Suncaster.</span> I went for kind 
+                    of a retro vibe with the 4:3 aspect ratio and heavy film grain and glow.
                   </p>
-                  <div className='mt-6 flex'>
-                    <Link href='https://poke-bd.itch.io/cataclysm'>
-                      <a target='_blank' className="text-sm text-neutral-400 font-mono hover:underline hover:cursor-pointer">Play on Itch.io.</a>
-                    </Link>
-                    <Link href='https://github.com/pokeblokdude/cat-game'>
-                      <a target='_blank' className="text-sm text-neutral-400 font-mono hover:underline hover:cursor-pointer ml-8">View source on GitHub.</a>
-                    </Link>
-                  </div>
+                  <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
                 </div>
               </div>
             </div>
+
             <div className='flex w-full mt-4'>
               <div className="flex flex-col w-full items-center">
-                <h2 className="w-full pl-1 mb-4 font-mono">Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand</h2>
+                <h2 className="w-full pl-1 mb-4 font-mono">Williams & Zimmer</h2>
                 <div 
                   className='w-full flex flex-col justify-center items-center h-[300px] relative'
                 >
-                  <Image src='/bg/bg-smg2.png' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
+                  <Image src='/bg/bg-wz.png' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
                   <div
                     className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
                       transition duration-300 py-16 px-20 backdrop-blur z-10"
                     onClick={() => {
-                      setVideoUrl('https://youtu.be/6hVOmstk7qs');
+                      setVideoUrl('https://youtu.be/d1epfuMQaio');
                       setModalOpen(true);
                     }}
                   >
-                    <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jan. 2022.</p>
+                    <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jun. 2022.</p>
                     <p className="leading-relaxed min:leading-relaxed">
-                      <span className="font-mono font-bold italic">Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand </span> 
-                      is a follow-up to my previous video on <span className="italic">Super Mario Galaxy</span>,
-                      this time covering the game&apos;s sequel, <span className="italic"> Super Mario Galaxy 2,</span> and how it
-                      compares to the 2007 original.
+                      <span className="font-mono font-bold italic">Williams & Zimmer </span> 
+                      was a project for FILM-ST 360 - Music, Culture and the Moving Image at UMass Amherst.
+                      It&apos;s a video essay covering a bit of the history of film music, and compares the music of the two most influential composers, John Williams
+                      and Hans Zimmer.
                     </p>
                     <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
         
-        <div className='flex flex-col w-[95%] self-center mt-10'>
+        <div className='flex flex-col w-[95%] self-center mt-10 mb-8'>
           <hr className='w-full border-dotted mb-2'></hr>
           <div className='flex justify-between mobile:flex-col'>
             <p className=''>Contact</p>
