@@ -8,7 +8,6 @@ const Navbar = () => {
           <Link href='/'><a className="ml-5 text-xl font-sans font-semibold text-white mobile:text-3xl mobile:ml-0">Alex Howe</a></Link>
         </div>
         <div className='flex w-[35%] max-w-[640px] justify-between items-center mr-5 mobile:mr-0 mobile:w-[80%] mobile:mt-2'>
-          <Link href='/reel'><a>Reel</a></Link>
           <Link href='/video'><a>Film & Video</a></Link>
           <Link href='/photo'><a>Photo</a></Link>
           <p className='font-thin mb-1 mx-1 mobile:hidden'>|</p>

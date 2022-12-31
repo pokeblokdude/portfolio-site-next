@@ -40,7 +40,7 @@ export default function Home() {
             <h2 className="w-[90%] pl-1 mt-2 font-mono text-sm text-neutral-400">Me, playing disc golf</h2>
             <div className='flex flex-col ml-1 w-[90%]'>
               <p className='mt-4 leading-relaxed min:leading-relaxed w-[95%]'>
-                Hi there! My name is Alex Howe. I&apos;m a filmmaker and game developer living in western Massachusetts,
+                Hi there! My name is Alex Howe. I&apos;m a filmmaker and hobbyist game developer living in western Massachusetts,
                 currently attending UMass Amherst for a degree in Computer Science and Film Studies.
               </p>
               <p className='mt-2 leading-relaxed min:leading-relaxed w-[95%]'>
@@ -73,7 +73,7 @@ export default function Home() {
                   <p className="leading-loose min:leading-relaxed">
                     <span className='font-mono font-bold italic'>Passing By </span> is a music video I shot for my friend Gruff Davies, 
                     AKA, <span className="italic">Suncaster.</span> I went for kind 
-                    of a retro vibe with the 4:3 aspect ratio and heavy film grain and glow.
+                    of a retro vibe with the 4:3 aspect ratio, along with heavy film grain and glow.
                   </p>
                   <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
                 </div>
