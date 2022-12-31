@@ -15,7 +15,39 @@ const Code = () => {
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Code</h1>
         
         <MediaItem 
-          title='00. UKG Job Referral Tool'
+          title='00. Breakout! for Arduino'
+          imageSrc='/bg/bg-breakout.jpg'
+          imagePos='object-center'
+          date='Dec. 2022.'
+          description={[
+            <p className="leading-relaxed" key='a'>
+              <span className='font-mono font-bold italic'>Breakout!</span> &nbsp;was my semester-long project
+              for CS335 - Inside the Box at UMass Amherst. My original plan was to make a simple 3D renderer, but
+              the LCD I had wouldn&apos;t work with the Arduino Nano board we were given (SPI would work, but it was way
+              too slow). In order to use the screen&apos;s 8-bit parallel mode, I switched to an Arduino Uno,
+              which is much slower than the Nano. Thus, I decided to make a <span className='italic'>Breakout</span> clone
+              instead.
+            </p>,
+            <p className="leading-loose mt-2" key='b'>
+              Here are some of the things I accomplished:
+            </p>,
+            <ul className='list-disc ml-5 leading-relaxed' key='c'>
+              <li>Graphics math library (originally intended for rendering) with vector & matrix implementations</li>
+              <li>5 levels (and a very simple way of making new ones)</li>
+              <li>&quot;Animated&quot; title screen</li>
+              <li>Pause, game-over and win screens</li>
+            </ul>,
+          ]}
+          isVideo={false}
+          halfWidth={false}
+          links={[
+            { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/cs335-breakout-project' }
+          ]}
+          bgDarkness={70}
+        />
+
+        <MediaItem 
+          title='01. UKG Job Referral Tool'
           imageSrc='/bg/bg-ukg.PNG'
           imagePos='object-top'
           date='Dec. 2021.'
@@ -48,7 +80,7 @@ const Code = () => {
         />
 
         <MediaItem 
-          title='01. Our House Bot'
+          title='02. Our House Bot'
           imageSrc='/bg/bg-ourhousebot.PNG'
           imagePos='object-top'
           date='2020.'
@@ -94,7 +126,7 @@ const Code = () => {
         />
 
         <div className='w-[95%] flex flex-col self-center mt-10'>
-          <h2 className="pl-1 font-mono">02. This Website :)</h2>
+          <h2 className="pl-1 font-mono">03. This Website :)</h2>
           <p className="text-sm text-neutral-400 font-mono mb-2 ml-4 mt-2 w-full max-w-[1366px] self-center">Dec. 2021 (ongoing)</p>
           <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
             <a target='_blank' className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px] w-fit text-neutral-400'>View source on GitHub.</a>

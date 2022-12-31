@@ -5,6 +5,7 @@ import Link from 'next/link'
 import React from 'react'
 import Modal from 'react-modal'
 import ReactPlayer from 'react-player'
+import MediaItem from '../components/MediaItem'
 
 import {
   MdArrowBackIosNew,
@@ -37,11 +38,11 @@ export default function Home() {
             <div className='w-[90%] flex flex-col justify-center items-center h-[500px] relative ml-2 mobile:h-[700px] mobile:w-[90%] mobile:ml-0'>
               <Image src='/me.jpg' layout='fill' className='object-cover object-top' alt='' priority={true} loading='eager' quality={100}/>
             </div>
-            <h2 className="w-[90%] pl-1 mt-2 font-mono text-sm text-neutral-400">Me, playing disc golf</h2>
+            <h2 className="w-[90%] pl-1 mt-2 font-mono text-sm text-neutral-400">Me, playing disc golf :)</h2>
             <div className='flex flex-col ml-1 w-[90%]'>
               <p className='mt-4 leading-relaxed min:leading-relaxed w-[95%]'>
-                Hi there! My name is Alex Howe. I&apos;m a filmmaker and hobbyist game developer living in western Massachusetts,
-                currently attending UMass Amherst for a degree in Computer Science and Film Studies.
+                Hi there! My name is Alex Howe. I&apos;m a filmmaker and hobbyist game developer living in western Massachusetts.
+                I recently graduated from UMass Amherst with a degree in Computer Science and Film Studies.
               </p>
               <p className='mt-2 leading-relaxed min:leading-relaxed w-[95%]'>
                 In my free time, I make videos on YouTube, work on games and film ideas, and play video games.
@@ -55,63 +56,53 @@ export default function Home() {
 
             <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
 
-            <div className="flex flex-col w-full items-center">
-              <h2 className="w-full pl-1 mb-4 font-mono">Passing By (Official Music Video)</h2>
-              <div 
-                className='w-full flex flex-col justify-center items-center h-[300px] relative'
-              >
-                <Image src='/bg/bg-gruff.png' layout='fill' className='object-cover object-center' alt='' priority={true} loading='eager' quality={100}/>
-                <div
-                    className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                      transition duration-300 py-16 px-20 backdrop-blur z-10"
-                    onClick={() => {
-                      setVideoUrl('https://youtu.be/TiyuKP6-zzI');
-                      setModalOpen(true);
-                    }}
-                  >
-                  <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jul. 2022.</p>
-                  <p className="leading-loose min:leading-relaxed">
-                    <span className='font-mono font-bold italic'>Passing By </span> is a music video I shot for my friend Gruff Davies, 
-                    AKA, <span className="italic">Suncaster.</span> I went for kind 
-                    of a retro vibe with the 4:3 aspect ratio, along with heavy film grain and glow.
-                  </p>
-                  <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
-                </div>
-              </div>
-            </div>
+            <MediaItem 
+              title='Descent'
+              imageSrc='/bg/bg-descent.png'
+              imagePos='object-center'
+              date='Dec. 2022.'
+              description={[
+                <p className="leading-relaxed" key='a'>
+                  <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
+                  how it can spiral endlessly. It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.
+                  I ended up doing my own music for the first time; I think it turned out really well.
+                </p>
+              ]}
+              videoUrl='https://youtu.be/Jkmh4wZ8KXU'
+              isVideo={true}
+              halfWidth={false}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
+              bgDarkness={70}
+              frontPage={true}
+            />
 
-            <div className='flex w-full mt-4'>
-              <div className="flex flex-col w-full items-center">
-                <h2 className="w-full pl-1 mb-4 font-mono">Williams & Zimmer</h2>
-                <div 
-                  className='w-full flex flex-col justify-center items-center h-[300px] relative'
-                >
-                  <Image src='/bg/bg-wz.png' layout='fill' className='object-cover object-center' alt='' loading='eager' priority={true} quality={100}/>
-                  <div
-                    className="w-full h-full bg-black/60 opacity-0 hover:cursor-pointer hover:opacity-100 hover:transition-all 
-                      transition duration-300 py-16 px-20 backdrop-blur z-10"
-                    onClick={() => {
-                      setVideoUrl('https://youtu.be/d1epfuMQaio');
-                      setModalOpen(true);
-                    }}
-                  >
-                    <p className="text-sm text-neutral-400 font-mono mb-2 w-full max-w-[1366px] self-center">Jun. 2022.</p>
-                    <p className="leading-relaxed min:leading-relaxed">
-                      <span className="font-mono font-bold italic">Williams & Zimmer </span> 
-                      was a project for FILM-ST 360 - Music, Culture and the Moving Image at UMass Amherst.
-                      It&apos;s a video essay covering a bit of the history of film music, and compares the music of the two most influential composers, John Williams
-                      and Hans Zimmer.
-                    </p>
-                    <p className="text-sm text-neutral-400 font-mono mt-4">Click to view.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <MediaItem 
+              title='Breakout! for Arduino'
+              imageSrc='/bg/bg-breakout.jpg'
+              imagePos='object-center'
+              date='Dec. 2022.'
+              description={[
+                <p className="leading-relaxed" key='a'>
+                  <span className='font-mono font-bold italic'>Breakout!</span> &nbsp;was my semester-long project
+                  for CS335 - Inside the Box at UMass Amherst. My original plan was to make a simple 3D renderer, but
+                  the LCD I had was too slow. Thus, I decided to make a <span className='italic'>Breakout</span> clone
+                  instead.
+                </p>
+              ]}
+              isVideo={false}
+              halfWidth={false}
+              links={[
+                { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/cs335-breakout-project' }
+              ]}
+              bgDarkness={70}
+              frontPage={true}
+            />
 
           </div>
         </div>
         
-        <div className='flex flex-col w-[95%] self-center mt-10 mb-8'>
+        <div className='flex flex-col w-[95%] self-center mt-2 mb-8'>
           <hr className='w-full border-dotted mb-2'></hr>
           <div className='flex justify-between mobile:flex-col'>
             <p className=''>Contact</p>

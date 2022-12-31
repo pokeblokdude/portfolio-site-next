@@ -39,31 +39,75 @@ const Video = () => {
         <div className="flex flex-col items-center">
 
           <MediaItem 
-            title='00. Cordelia Lear'
-            imageSrc='/bg/bg-cordelia.jpeg'
+            title='00. Descent'
+            imageSrc='/bg/bg-descent.png'
             imagePos='object-center'
-            date='May. 2022.'
+            date='Dec. 2022.'
             description={[
-              <p className="leading-loose" key='a'><span className="font-bold italic font-mono">Cordelia Lear</span> is a short film production 
-                of a play written by Smith College professor Len Berkman. It was directed by actor and Smith grad student, James Barry.
-                The play is essentially one long monologue, set inside of William Shakespeare&apos;s  
-                <span className="italic"> King Lear,</span> following the musings and inner journey of Cordelia Lear, the daughter of the
-                aforementioned King.
+              <p className="leading-loose" key='a'>
+                <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
+                how it can spiral endlessly. It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.
               </p>,
-              <p className="leading-loose mt-6" key='b'>
-                I was the cinematographer, lighting and shooting the film alongside my friend, Harrison Tan. I also edited, color graded, and did sound editing & mixing.
-                The music is by my friend, Caleb Kennedy, and the flipbook animation was made by my girlfriend, Janna Gilleman.
+              <p className="leading-loose mt-4" key='b'>
+                I directed, shot and edited the film; there wasn&apos;t really a script, just an outline. I also color graded, did the audio, and additionally 
+                ended up doing my own music for the first time;
+                I think it turned out really well. I&apos;m partiucularly proud of the plucking/bubbling sound. The interiors were shot at Smith College.
               </p>
             ]}
-            videoUrl='https://youtu.be/4PQoo0MQVQA'
+            videoUrl='https://youtu.be/Jkmh4wZ8KXU'
             isVideo={true}
             halfWidth={false}
             setVideoUrl={setVideoUrl}
             setModalOpen={setModalOpen}
+            bgDarkness={70}
           />
 
+          <div className="flex w-[95%]">
+            <MediaItem 
+              title='01. Transmission'
+              imageSrc='/bg/bg-transmission.jpeg'
+              imagePos='object-center'
+              date='Oct. 2022.'
+              description={[
+                <p className="leading-relaxed" key='a'>
+                  <span className="font-bold italic font-mono">Transmission</span> is a short film about the omnipresence of technology.
+                  &nbsp;It was a project for the &apos;experimental narrative&apos; module of my experimental film class. 
+                </p>,
+                <p className="leading-relaxed mt-4" key='b'>
+                  I directed, shot and edited the film. I also did the color grading and audio editing.
+                </p>
+              ]}
+              videoUrl='https://youtu.be/Q3yr8nJDPYE'
+              isVideo={true}
+              halfWidth={true}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
+            />
+
+            <MediaItem 
+              title='02. Cordelia Lear'
+              imageSrc='/bg/bg-cordelia.jpeg'
+              imagePos='object-center'
+              date='May. 2022.'
+              description={[
+                <p className="leading-relaxed" key='a'><span className="font-bold italic font-mono">Cordelia Lear</span> is a short film production 
+                  of a play written by Smith College professor Len Berkman. The monologue is set inside of William Shakespeare&apos;s  
+                  <span className="italic"> King Lear,</span> following the inner journey of the king&apos;s daughter, Cordelia.
+                </p>,
+                <p className="leading-relaxed mt-2" key='b'>
+                  I was co-cinematographer alongside my friend, Harrison Tan. I also edited, color graded, and did sound editing.
+                </p>
+              ]}
+              videoUrl='https://youtu.be/4PQoo0MQVQA'
+              isVideo={true}
+              halfWidth={true}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
+            />
+          </div>
+
           <MediaItem 
-            title='01. The Machine'
+            title='03. The Machine'
             imageSrc='/bg/bg-the-machine.jpeg'
             imagePos='object-center'
             date='Dec. 2018.'
@@ -88,7 +132,7 @@ const Video = () => {
 
           <div className="flex w-[95%]">
             <MediaItem 
-              title='02. Global Singularity Project'
+              title='04. Global Singularity Project'
               imageSrc='/bg/bg-gsp.jpeg'
               imagePos='object-center'
               date='Apr. 2018.'
@@ -107,7 +151,7 @@ const Video = () => {
               setModalOpen={setModalOpen}
             />
             <MediaItem 
-              title='03. A Time-Lapse Journey through 2016'
+              title='04. A Time-Lapse Journey through 2016'
               imageSrc='/bg/bg-timelapse.jpeg'
               imagePos='object-center'
               date='Jan. 2017.'
@@ -185,7 +229,7 @@ const Video = () => {
             setModalOpen={setModalOpen}
           />
 
-          <div className="flex w-[95%] mt-8">
+          <div className="flex w-[95%]">
             <MediaItem 
               title='02. Williams & Zimmer - The Story of Modern Film Music'
               imageSrc='/bg/bg-wz.png'
@@ -253,7 +297,7 @@ const Video = () => {
             setModalOpen={setModalOpen}
           />
 
-          <div className="flex w-[95%] mt-8">
+          <div className="flex w-[95%]">
             <MediaItem 
               title='05. Fear.'
               imageSrc='/bg/bg-fear.png'
@@ -293,7 +337,7 @@ const Video = () => {
             />
           </div>
             
-          <div className="flex w-[95%] mt-8">
+          <div className="flex w-[95%]">
             <MediaItem 
               title='07. Adventure at Amethyst Brook'
               imageSrc='/bg/bg-amethyst.png'
