@@ -25,7 +25,7 @@ export const getServerSideProps = async () => {
   })
   const data = res.data;
 
-  console.log(data.items);
+  //console.log(data.items);
   
   const videos = [];
   data.items.map(v => {
