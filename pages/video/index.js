@@ -6,8 +6,40 @@ import Image from "next/image"
 import Footer from "../../components/Footer"
 import Link from "next/link"
 import MediaItem from "../../components/MediaItem"
+import YoutubeVideo from "../../components/YoutubeVideo"
 
-const Video = () => {
+const {google} = require('googleapis');
+const youtube = google.youtube({
+  version: 'v3',
+  auth: process.env.YT_KEY
+});
+
+export const getServerSideProps = async () => {
+  
+  const res = await youtube.search.list({
+    part: 'snippet',
+    channelId: 'UCgq8JFvB45kRq_uq6az60PQ',
+    order: 'date',
+    type: 'video',
+    maxResults: '4'
+  })
+  const data = res.data;
+
+  console.log(data.items);
+  
+  const videos = [];
+  data.items.map(v => {
+    videos.push(v);
+  })
+
+  return {
+    props: {
+      recentUploads: videos
+    }
+  };
+}
+
+const Video = ({ recentUploads }) => {
 
   const [ modalOpen, setModalOpen ] = React.useState(false);
   const [ videoUrl, setVideoUrl ] = React.useState('');
@@ -201,79 +233,6 @@ const Video = () => {
           />
 
           <MediaItem 
-            title='01. Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand'
-            imageSrc='/bg/bg-smg2.png'
-            imagePos='object-center'
-            date='Jul. 2022.'
-            description={[
-              <p className="leading-loose min:leading-relaxed" key='a'>
-                <span className="font-mono font-bold italic">Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand </span> 
-                is a follow-up to my previous video, <span className="italic">Super Mario Galaxy - As Good as We Remember?</span>
-                <span className="mobile:hidden">&nbsp;This time I cover the game&apos;s sequel, <span className="italic"> Super Mario Galaxy 2,</span> and how it
-                compares to the 2007 original, in terms of graphics, gameplay, music, etc. </span>
-              </p>,
-              <p className="leading-loose min:leading-relaxed mt-4 mobile:hidden" key='b'>
-                I tried to keep this video tighter and more focused than the first, not going quite as in-depth on every
-                minute detail, but rather grouping together more &quot;big-picture&quot; ideas to give more of an overview
-                of my thoughts throughout the whole video, rather than just at the end.
-              </p>,
-              <p className="leading-loose mt-4 mobile:hidden" key='c'>
-                I again used <Link href='https://noclip.website'><a target='_blank' className="font-semibold hover:underline">noclip.website</a></Link>
-                &nbsp;to capture cinematics, and the video&apos;s sountrack is again comprised of music from the game.
-              </p>
-            ]}
-            videoUrl='https://youtu.be/6hVOmstk7qs'
-            isVideo={true}
-            halfWidth={false}
-            setVideoUrl={setVideoUrl}
-            setModalOpen={setModalOpen}
-          />
-
-          <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
-            <MediaItem 
-              title='02. Williams & Zimmer - The Story of Modern Film Music'
-              imageSrc='/bg/bg-wz.png'
-              imagePos='object-center'
-              date='Jun. 2022'
-              description={[
-                <p className="leading-relaxed min:leading-normal" key='a'>
-                  <span className="font-mono font-bold italic">Williams & Zimmer - A Story of Film Music</span> was a project for FILM-ST 360 - 
-                  Music, Culture and the Moving Image at UMass Amherst. 
-                  It&apos;s a video essay covering a bit of the history of film music, and compares the music of the two most influential composers, John Williams
-                  and Hans Zimmer.
-                </p>
-              ]}
-              videoUrl='https://youtu.be/d1epfuMQaio'
-              isVideo={true}
-              halfWidth={true}
-              setVideoUrl={setVideoUrl}
-              setModalOpen={setModalOpen}
-            />
-            <MediaItem 
-              title='03. Super Mario Galaxy - As Good as We Remember?'
-              imageSrc='/bg/bg-smg.png'
-              imagePos='object-right'
-              date='Aug. 2021'
-              description={[
-                <p className="leading-relaxed min:leading-normal" key='a'>
-                  <span className="font-mono font-bold italic">Super Mario Galaxy - As Good as We Remember? </span> 
-                  is a long-form video essay reflecting on the 2007 Nintendo game,
-                  <span className="italic"> Super Mario Galaxy.</span> It covers everything from level design to graphics, 
-                  sound and gameplay.
-                </p>,
-                <p className="leading-loose mt-1" key='b'>
-                  The video&apos;s sountrack is comprised of music from the game.
-                </p>
-              ]}
-              videoUrl='https://youtu.be/OSq1M7QD2wM'
-              isVideo={true}
-              halfWidth={true}
-              setVideoUrl={setVideoUrl}
-              setModalOpen={setModalOpen}
-            />
-          </div>
-
-          <MediaItem 
             title='04. CS:GO - Zeitgeist'
             imageSrc='/bg/bg-csgo.png'
             imagePos='object-center'
@@ -377,14 +336,34 @@ const Video = () => {
         </div>
 
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">YouTube</h1>
-        <p className="w-[95%] self-center mt-[-32px] ml-1">
+        <p className="w-[95%] self-center mt-[-32px] ml-2">
           I have a YouTube channel,&nbsp;
           <Link href='https://www.youtube.com/@poke_'>
             <a target='_blank' className='font-mono font-semibold hover:underline hover:cursor-pointer'>Poke</a>
           </Link>
           , where I post video essays, mostly covering video games and film.
         </p>
-        <p className="w-[95%] self-center mt-6 ml-1">This section is under construction :)</p>
+        <h2 className="text-lg w-[95%] self-center mt-4 mb-2 ml-1">Recent Uploads</h2>
+        <div className="flex w-[95%] self-center flex-wrap justify-center">
+          {
+            recentUploads.map(
+              vid => <YoutubeVideo 
+                        title={vid.snippet.title}
+                        thumbUrl={vid.snippet.thumbnails.high.url}
+                        url={`https://www.youtube.com/watch?v=${vid.id.videoId}`}
+                        date={vid.snippet.publishedAt}
+                        key={vid.etag} 
+                      />
+            )
+          }
+        </div>
+        <p className="w-[95%] self-center mt-4">
+          Check out the rest of my videos&nbsp;
+          <Link href="https://www.youtube.com/channel/UCgq8JFvB45kRq_uq6az60PQ">
+            <a target='_blank' className="font-mono font-semibold underline hover:cursor-pointer">here</a>
+          </Link>
+          .
+        </p>
       </div>
 
       <Modal
