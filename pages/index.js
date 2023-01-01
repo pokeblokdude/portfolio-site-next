@@ -64,7 +64,7 @@ export default function Home() {
               description={[
                 <p className="leading-relaxed" key='a'>
                   <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
-                  how it can spiral endlessly. It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.
+                  how it can spiral endlessly. <span className='mobile:hidden'>It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.</span>
                   I ended up doing my own music for the first time; I think it turned out really well.
                 </p>
               ]}
@@ -86,8 +86,8 @@ export default function Home() {
                 <p className="leading-relaxed" key='a'>
                   <span className='font-mono font-bold italic'>Breakout!</span> &nbsp;was my semester-long project
                   for CS335 - Inside the Box at UMass Amherst. My original plan was to make a simple 3D renderer, but
-                  the LCD I had was too slow. Thus, I decided to make a <span className='italic'>Breakout</span> clone
-                  instead.
+                  the LCD I had was too slow. <span className='mobile:hidden'>Thus, I decided to make a <span className='italic'>Breakout</span> clone
+                  instead.</span>
                 </p>
               ]}
               isVideo={false}

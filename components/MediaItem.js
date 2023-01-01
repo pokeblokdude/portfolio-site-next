@@ -40,9 +40,9 @@ const MediaItem = ({ title, imageSrc, imagePos, date, description, videoUrl, isV
   }
 
   return (
-    <div className={`flex flex-col items-center ${halfWidth ? 'w-1/2' : 'w-full'} mb-8`}>
+    <div className={`flex flex-col items-center ${halfWidth ? 'w-1/2' : 'w-full'} mb-8 mobile:w-[95%]`}>
       <h2 
-        className={`pl-1 mb-4 font-mono`}
+        className={`pl-1 mb-4 font-mono mobile:w-full`}
         style={{
           width: width
         }}
@@ -50,7 +50,7 @@ const MediaItem = ({ title, imageSrc, imagePos, date, description, videoUrl, isV
         {title}
       </h2>
       <div 
-        className={`flex flex-col justify-center items-center relative`}
+        className={`flex flex-col justify-center items-center relative mobile:h-[360px] mobile:w-full`}
         style={{
           height: height,
           width: width
@@ -61,7 +61,7 @@ const MediaItem = ({ title, imageSrc, imagePos, date, description, videoUrl, isV
           className={
             `w-full h-full flex flex-col justify-between opacity-0 ${isVideo ? 'hover:cursor-pointer' : ''} 
             ${hovering ? 'opacity-100' : ''} ${hovering ? 'transition-all' : ''} transition duration-200 
-            backdrop-blur z-10 mobile:px-14 mobile:py-10`
+            backdrop-blur z-10 mobile:px-12 mobile:py-10`
           }
           style={{
             paddingTop: textPaddingY,

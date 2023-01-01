@@ -11,7 +11,7 @@ const Game = () => {
       <Head>
         <title>Game | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] flex flex-col mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col items-center mb-20">
         <h1 className="text-2xl font-semibold w-[95%] self-center mt-10 mb-6">Games</h1>
         
         <MediaItem 
@@ -28,7 +28,7 @@ const Game = () => {
               </Link>
               &nbsp;with the theme, &quot;You Are the Enemy.&quot;
             </p>,
-            <p className='leading-loose min:leading-relaxed mt-4' key='b'>
+            <p className='leading-loose min:leading-relaxed mt-4 mobile:hidden' key='b'>
               The game is 3D, with 2D, paper-like graphics inspired by the <span className='italic'>Paper Mario</span> series. The goal is to
               jump around and knock stuff over, causing the guy to walk over and fix it. If you distract him for long enough, you can light the
               oven on fire to burn down the house. At first we were planning on making it a puzzle game, but eventually we settled on something
@@ -46,7 +46,7 @@ const Game = () => {
 
         <h1 className="text-2xl font-semibold w-[95%] self-center mt-10 mb-6">CS:GO Maps</h1>
 
-        <div className="flex w-[95%] self-center">
+        <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
           <MediaItem 
             title='00. am_snowpoint'
             imageSrc='/bg/bg-snowpoint.jpg'
@@ -82,6 +82,7 @@ const Game = () => {
             links={[
               { text: 'View on Steam Workshop.', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2016705263' }
             ]}
+            bgDarkness={70}
           />
         </div>
       </div>

@@ -48,7 +48,7 @@ const Video = () => {
                 <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
                 how it can spiral endlessly. It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.
               </p>,
-              <p className="leading-loose mt-4" key='b'>
+              <p className="leading-loose mt-4 mobile:hidden" key='b'>
                 I directed, shot and edited the film; there wasn&apos;t really a script, just an outline. I also color graded, did the audio, and additionally 
                 ended up doing my own music for the first time;
                 I think it turned out really well. I&apos;m partiucularly proud of the plucking/bubbling sound. The interiors were shot at Smith College.
@@ -62,7 +62,7 @@ const Video = () => {
             bgDarkness={70}
           />
 
-          <div className="flex w-[95%]">
+          <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
               title='01. Transmission'
               imageSrc='/bg/bg-transmission.jpeg'
@@ -112,13 +112,13 @@ const Video = () => {
             imagePos='object-center'
             date='Dec. 2018.'
             description={[
-              <p className="leading-loose" key='a'><span className="font-bold italic font-mono">The Machine</span> was my final project for 
+              <p className="leading-loose mobile:leading-relaxed" key='a'><span className="font-bold italic font-mono">The Machine</span> was my final project for 
                 VM120 - Foundations in Media Arts Production at Emerson College. 
-                It&apos;s a psychological-horror-themed short film about a young man coming to terms with the future, 
-                inspired by some of the darker episodes of 
-                <span className="italic"> Doctor Who</span> and <span className="italic">Black Mirror.</span>
+                It&apos;s a psychological-horror-themed short film about a young man coming to terms with the future<span className="desktop:hidden">.</span> 
+                <span className="mobile:hidden">, inspired by some of the darker episodes of 
+                <span className="italic"> Doctor Who</span> and <span className="italic">Black Mirror.</span></span>
               </p>,
-              <p className="leading-loose mt-4" key='b'>
+              <p className="leading-loose mt-4 mobile:leading-relaxed mobile:hidden" key='b'>
                 I wrote, directed, shot and edited the film. It was written over Thanksgiving break and shot at 
                 my house the next weekend. The music is by my good friend, Caleb Kennedy.
               </p>
@@ -130,7 +130,7 @@ const Video = () => {
             setModalOpen={setModalOpen}
           />
 
-          <div className="flex w-[95%]">
+          <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
               title='04. Global Singularity Project'
               imageSrc='/bg/bg-gsp.jpeg'
@@ -182,15 +182,15 @@ const Video = () => {
             imagePos='object-center'
             date='Jul. 2022.'
             description={[
-              <p className="leading-loose min:leading-relaxed" key='a'>
+              <p className="leading-loose mobile:leading-relaxed" key='a'>
                 <span className="font-mono font-bold italic">Passing By </span> 
                 is a music video I shot for my friend Gruff Davies, who wrote and performed the song under his
-                artist name, <span className="italic">Suncaster.</span> Most footage in the video was shot at various locations 
-                around our home in western Massachusetts, with a few stock clips for the greenscreen section.
+                artist name, <span className="italic">Suncaster.</span> <span className="mobile:hidden">Most footage in the video was shot at various locations 
+                around our home in western Massachusetts, with a few stock clips for the greenscreen section.</span>
               </p>,
-              <p className="leading-loose min:leading-relaxed mt-4" key='b'>
-                I directed, shot, edited, and color graded the video. I was going for kind of a retro vibe with the 
-                4:3 aspect ratio and heavy film grain and glow. Personally I think it looks really good.
+              <p className="leading-loose mobile:leading-relaxed mt-4 mobile:mt-1" key='b'>
+                <span className="mobile:hidden">I directed, shot, edited, and color graded the video.</span> I was going for kind of a retro vibe with the 
+                4:3 aspect ratio and heavy film grain and glow. <span className="mobile:hidden">Personally I think it looks really good.</span>
               </p>
             ]}
             videoUrl='https://youtu.be/TiyuKP6-zzI'
@@ -209,15 +209,15 @@ const Video = () => {
               <p className="leading-loose min:leading-relaxed" key='a'>
                 <span className="font-mono font-bold italic">Super Mario Galaxy 2 - Nintendo&apos;s Line in the Sand </span> 
                 is a follow-up to my previous video, <span className="italic">Super Mario Galaxy - As Good as We Remember?</span>
-                &nbsp;This time I cover the game&apos;s sequel, <span className="italic"> Super Mario Galaxy 2,</span> and how it
-                compares to the 2007 original, in terms of graphics, gameplay, music, etc. 
+                <span className="mobile:hidden">&nbsp;This time I cover the game&apos;s sequel, <span className="italic"> Super Mario Galaxy 2,</span> and how it
+                compares to the 2007 original, in terms of graphics, gameplay, music, etc. </span>
               </p>,
-              <p className="leading-loose min:leading-relaxed mt-4" key='b'>
+              <p className="leading-loose min:leading-relaxed mt-4 mobile:hidden" key='b'>
                 I tried to keep this video tighter and more focused than the first, not going quite as in-depth on every
                 minute detail, but rather grouping together more &quot;big-picture&quot; ideas to give more of an overview
                 of my thoughts throughout the whole video, rather than just at the end.
               </p>,
-              <p className="leading-loose mt-4" key='c'>
+              <p className="leading-loose mt-4 mobile:hidden" key='c'>
                 I again used <Link href='https://noclip.website'><a target='_blank' className="font-semibold hover:underline">noclip.website</a></Link>
                 &nbsp;to capture cinematics, and the video&apos;s sountrack is again comprised of music from the game.
               </p>
@@ -229,7 +229,7 @@ const Video = () => {
             setModalOpen={setModalOpen}
           />
 
-          <div className="flex w-[95%]">
+          <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
               title='02. Williams & Zimmer - The Story of Modern Film Music'
               imageSrc='/bg/bg-wz.png'
@@ -283,10 +283,10 @@ const Video = () => {
                 <span className="font-mono font-bold italic">CS:GO - Zeitgeist </span>
                 is a frag movie I made using moments from me and my friends&apos; gameplay in Valve&apos;s tactical shooter,
                 <span className="italic"> Counter-Strike: Global Offensive. </span>
-                Footage was captured using the game&apos;s built-in &quot;demo&quot; replay system, as well as a third party tool
-                called Half-Life Advanced Effects for keyframing camera moves. I rebuilt stylized UI elements using Adobe After Effects.
+                <span className="mobile:hidden">Footage was captured using the game&apos;s built-in &quot;demo&quot; replay system, as well as a third party tool
+                called Half-Life Advanced Effects for keyframing camera moves. I rebuilt stylized UI elements using Adobe After Effects.</span>
               </p>,
-              <p className="leading-loose mt-4" key='b'>
+              <p className="leading-loose mt-4 mobile:hidden" key='b'>
                 The music used is &quot;Zeitgeist&quot; by <span className="italic">Savant,</span> hence the title of the video.
               </p>
             ]}
@@ -297,7 +297,7 @@ const Video = () => {
             setModalOpen={setModalOpen}
           />
 
-          <div className="flex w-[95%]">
+          <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
               title='05. Fear.'
               imageSrc='/bg/bg-fear.png'
@@ -337,7 +337,7 @@ const Video = () => {
             />
           </div>
             
-          <div className="flex w-[95%]">
+          <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
               title='07. Adventure at Amethyst Brook'
               imageSrc='/bg/bg-amethyst.png'
