@@ -22,36 +22,54 @@ const MediaItem = ({ title, imageSrc, imagePos, date, description, videoUrl, isV
   
   const [ hovering, setHovering ] = React.useState(false);
 
-  let height = 480;
-  let width = 'w-[95%]';
-  let textPaddingX = 'px-40';
-  let textPaddingY = 'py-20';
+  let height = '480px';
+  let width = '95%';
+  let textPaddingX = '10rem';
+  let textPaddingY = '5rem';
   if(frontPage) {
-    height = 300;
-    width = 'w-full';
-    textPaddingX = 'px-20';
-    textPaddingY = 'py-16';
+    height = '300px';
+    width = '100%';
+    textPaddingX = '5rem';
+    textPaddingY = '4rem';
   }
   else if(halfWidth) {
-    height = 360;
-    width = 'w-full';
-    textPaddingX = 'px-20';
-    textPaddingY = 'py-20';
+    height = '360px';
+    width = '100%';
+    textPaddingX = '5rem';
+    textPaddingY = '5rem';
   }
 
   return (
     <div className={`flex flex-col items-center ${halfWidth ? 'w-1/2' : 'w-full'} mb-8`}>
-      <h2 className={`${width} pl-1 mb-4 font-mono`}>{title}</h2>
+      <h2 
+        className={`pl-1 mb-4 font-mono`}
+        style={{
+          width: width
+        }}
+      >
+        {title}
+      </h2>
       <div 
-        className={`${width} flex flex-col justify-center items-center h-[${height}px] relative`}
+        className={`flex flex-col justify-center items-center relative`}
+        style={{
+          height: height,
+          width: width
+        }}
       >
         <Image src={imageSrc} layout='fill' className={`object-cover ${imagePos}`} alt='' loading='eager' priority={true} quality={100}/>
         <div
           className={
-            `w-full h-full flex flex-col justify-between bg-black/${bgDarkness} opacity-0 ${isVideo ? 'hover:cursor-pointer' : ''} 
+            `w-full h-full flex flex-col justify-between opacity-0 ${isVideo ? 'hover:cursor-pointer' : ''} 
             ${hovering ? 'opacity-100' : ''} ${hovering ? 'transition-all' : ''} transition duration-200 
-            ${textPaddingY} ${textPaddingX} backdrop-blur z-10 mobile:px-14 mobile:py-10`
+            backdrop-blur z-10 mobile:px-14 mobile:py-10`
           }
+          style={{
+            paddingTop: textPaddingY,
+            paddingBottom: textPaddingY,
+            paddingLeft: textPaddingX,
+            paddingRight: textPaddingX,
+            backgroundColor: `rgba(0, 0, 0, ${bgDarkness/100})` 
+          }}
           onClick={
             isVideo ? () => {
               setVideoUrl(videoUrl);
