@@ -17,7 +17,7 @@ const Footer = ({ sticky }) => {
         </div>
       </div>
       <p className="font-light text-neutral-400 text-center text-xs min-w-fit mr-6 mobile:mb-4">
-        Last updated: 12.31.22
+        Last updated: 04/13/23
       </p>
     </div>
   )

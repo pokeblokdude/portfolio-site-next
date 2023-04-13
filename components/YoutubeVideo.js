@@ -9,7 +9,7 @@ const YoutubeVideo = ({ title, thumbUrl, url, date }) => {
   const titleString = title.replace(/&amp;/g, '&');
 
   return (
-    <div className='flex flex-col w-[576px] my-2 mx-2'>
+    <div className='flex flex-col w-[576px] my-3 mx-6'>
       <a href={url} target='_blank' rel='noreferrer noopener' className='flex  w-full h-[324px] relative'>
         <Image src={thumbUrl} alt='' layout='fill' className='object-cover' loading='eager'/>
       </a>

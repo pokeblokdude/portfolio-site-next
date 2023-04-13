@@ -14,7 +14,7 @@ const youtube = google.youtube({
   auth: process.env.YT_KEY
 });
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   
   const res = await youtube.search.list({
     part: 'snippet',
@@ -35,7 +35,8 @@ export const getServerSideProps = async () => {
   return {
     props: {
       recentUploads: videos
-    }
+    },
+    revalidate: 60
   };
 }
 
@@ -233,7 +234,7 @@ const Video = ({ recentUploads }) => {
           />
 
           <MediaItem 
-            title='04. CS:GO - Zeitgeist'
+            title='01. CS:GO - Zeitgeist'
             imageSrc='/bg/bg-csgo.png'
             imagePos='object-center'
             date='Aug. 2018'
@@ -258,7 +259,7 @@ const Video = ({ recentUploads }) => {
 
           <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
-              title='05. Fear.'
+              title='02. Fear.'
               imageSrc='/bg/bg-fear.png'
               imagePos='object-center'
               date='Nov. 2021'
@@ -277,7 +278,7 @@ const Video = ({ recentUploads }) => {
               setModalOpen={setModalOpen}
             />
             <MediaItem 
-              title='06. Senior Class Trip to Puerto Rico'
+              title='03. Senior Class Trip to Puerto Rico'
               imageSrc='/bg/bg-pr.jpg'
               imagePos='object-center'
               date='Jun. 2018'
@@ -298,7 +299,7 @@ const Video = ({ recentUploads }) => {
             
           <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
-              title='07. Adventure at Amethyst Brook'
+              title='04. Adventure at Amethyst Brook'
               imageSrc='/bg/bg-amethyst.png'
               imagePos='object-center'
               date='Feb. 2020'
@@ -315,7 +316,7 @@ const Video = ({ recentUploads }) => {
               setModalOpen={setModalOpen}
             />
             <MediaItem 
-              title='08. Montage'
+              title='05. Montage'
               imageSrc='/bg/bg-montage.png'
               imagePos='object-left'
               date='Oct. 2018'
