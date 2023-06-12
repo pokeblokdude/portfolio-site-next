@@ -11,13 +11,13 @@ const Footer = ({ sticky }) => {
         <p className='font-light m-2 text-neutral-300 mobile:hidden'>|</p>
         <div className='flex items-center'>
           <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
-            <a className='hover:underline text-neutral-200' target='_blank'>View on GitHub</a>
+            <a className='hover:underline text-neutral-200' target='_blank'>View this site on GitHub</a>
           </Link>
           <FaGithub className='ml-2 text-neutral-200'/>
         </div>
       </div>
-      <p className="font-light text-neutral-400 text-center text-xs min-w-fit mr-6 mobile:mb-4">
-        Last updated: 04/23/23
+      <p className="font-light text-neutral-400 text-center text-xs min-w-fit mr-6 mobile:pb-2 mobile:mt-2">
+        Last updated: 06/12/23
       </p>
     </div>
   )

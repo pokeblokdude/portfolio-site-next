@@ -57,19 +57,19 @@ export default function Home() {
             <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
 
             <MediaItem 
-              title='Descent'
-              imageSrc='/bg/bg-descent.png'
+              title='Simple Renderer'
+              imageSrc='/bg/bg-renderer.PNG'
               imagePos='object-center'
-              date='Dec. 2022.'
+              date='Apr. 2023.'
               description={[
-                <p className="leading-relaxed" key='a'>
-                  <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
-                  how it can spiral endlessly. <span className='mobile:hidden'>It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.</span>
-                  I ended up doing my own music for the first time; I think it turned out really well.
+                <p className="leading-loose" key='a'>
+                  An extremely bare-bones software renderer written (almost) from scratch in C++. It uses SDL2 for windowing and drawing the final image, 
+                  and GLM for vector/matrix math. 
                 </p>
               ]}
               videoUrl='https://youtu.be/Jkmh4wZ8KXU'
-              isVideo={true}
+              isVideo={false}
+              links={[{text: "View source on GitHub.", url: "https://github.com/pokeblokdude/simple-renderer"}]}
               halfWidth={false}
               setVideoUrl={setVideoUrl}
               setModalOpen={setModalOpen}
@@ -78,23 +78,22 @@ export default function Home() {
             />
 
             <MediaItem 
-              title='Breakout! for Arduino'
-              imageSrc='/bg/bg-breakout.jpg'
+              title='Descent'
+              imageSrc='/bg/bg-descent.png'
               imagePos='object-center'
               date='Dec. 2022.'
               description={[
                 <p className="leading-relaxed" key='a'>
-                  <span className='font-mono font-bold italic'>Breakout!</span> &nbsp;was my semester-long project
-                  for CS335 - Inside the Box at UMass Amherst. My original plan was to make a simple 3D renderer, but
-                  the LCD I had was too slow. <span className='mobile:hidden'>Thus, I decided to make a <span className='italic'>Breakout</span> clone
-                  instead.</span>
+                  <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
+                  how it can spiral endlessly. <span className='mobile:hidden'>It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.</span>
+                  &nbsp;I ended up doing my own music for the first time; I think it turned out really well.
                 </p>
               ]}
-              isVideo={false}
+              videoUrl='https://youtu.be/Jkmh4wZ8KXU'
+              isVideo={true}
               halfWidth={false}
-              links={[
-                { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/cs335-breakout-project' }
-              ]}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
               bgDarkness={70}
               frontPage={true}
             />
@@ -108,7 +107,7 @@ export default function Home() {
             <p className=''>Contact</p>
             <div className='flex w-2/5 min:w-1/2 justify-between mobile:flex-col mobile:w-full'>
               <p className='font-mono font-light text-sm'>email: howie242000@gmail.com</p>
-              <p className='font-mono font-light text-sm'>discord: Alex#5039</p>
+              <p className='font-mono font-light text-sm'>discord: poke_bd</p>
             </div>
           </div>
         </div>

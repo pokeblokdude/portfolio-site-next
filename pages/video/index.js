@@ -184,7 +184,7 @@ const Video = ({ recentUploads }) => {
               setModalOpen={setModalOpen}
             />
             <MediaItem 
-              title='04. A Time-Lapse Journey through 2016'
+              title='05. A Time-Lapse Journey through 2016'
               imageSrc='/bg/bg-timelapse.jpeg'
               imagePos='object-center'
               date='Jan. 2017.'

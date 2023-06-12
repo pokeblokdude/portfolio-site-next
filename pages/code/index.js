@@ -15,7 +15,33 @@ const Code = () => {
         <h1 className="text-2xl font-semibold w-[95%] my-10">Code</h1>
         
         <MediaItem 
-          title='00. Breakout! for Arduino'
+          title='00. Simple Renderer'
+          imageSrc='/bg/bg-renderer.PNG'
+          imagePos='object-center'
+          date='Apr. 2023.'
+          description={[
+            <p className="leading-loose" key='a'>
+              An extremely bare-bones software renderer written (almost) from scratch in C++. It uses SDL2 for windowing and drawing the final image, 
+              and GLM for vector/matrix math. 
+            </p>,
+            <p className='leading-loose mt-3' key='b'>
+              Rendering a scene with 2 shapes (14 tris) takes about 1.5ms on a release build; currently all the shapes are hard-coded, and there is no lighting. The only vertex attribute supported is color.
+            </p>,
+            <p className='leading-loose mt-3' key='c'>
+              If I come back to this project in the future, 
+              I&apos;d like to add support for standard 3D models, as well as some basic lighting/shading.
+            </p>,
+          ]}
+          isVideo={false}
+          halfWidth={false}
+          links={[
+            { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/simple-renderer' }
+          ]}
+          bgDarkness={70}
+        />
+
+        <MediaItem 
+          title='01. Breakout! for Arduino'
           imageSrc='/bg/bg-breakout.jpg'
           imagePos='object-center'
           date='Dec. 2022.'
@@ -33,7 +59,7 @@ const Code = () => {
             </p>,
             <ul className='list-disc ml-5 leading-relaxed mobile:hidden' key='c'>
               <li>Graphics math library (originally intended for rendering) with vector & matrix implementations</li>
-              <li>5 levels (and a very simple way of making new ones)</li>
+              <li>5 levels (and a very simple way of coding new ones)</li>
               <li>&quot;Animated&quot; title screen</li>
               <li>Pause, game-over and win screens</li>
             </ul>,
@@ -47,7 +73,7 @@ const Code = () => {
         />
 
         <MediaItem 
-          title='01. UKG Job Referral Tool'
+          title='02. UKG Job Referral Tool'
           imageSrc='/bg/bg-ukg.PNG'
           imagePos='object-top'
           date='Dec. 2021.'
@@ -66,7 +92,7 @@ const Code = () => {
               <li>Manager view referrals</li>
             </ul>,
             <p className="leading-loose mt-2 mobile:hidden" key='c'>
-              My team chose to go with React.js, Express and PostgreSQL for our tech stack, and a neumorphic design
+              My team chose to go with React.js, Express and PostgreSQL for our tech stack, and a &quot;neumorphic&quot; design
               for the frontend.
             </p>
           ]}
@@ -80,7 +106,7 @@ const Code = () => {
         />
 
         <MediaItem 
-          title='02. Our House Bot'
+          title='03. Our House Bot'
           imageSrc='/bg/bg-ourhousebot.PNG'
           imagePos='object-top'
           date='2020.'
