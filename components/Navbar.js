@@ -13,8 +13,6 @@ const Navbar = () => {
           <p className='font-thin mb-1 mx-1 mobile:hidden'>|</p>
           <Link href='/game'><a>Game</a></Link>
           <Link href='/code'><a>Code</a></Link>
-          <p className='font-thin mb-1 mx-1'>|</p>
-          <Link href='https://docs.google.com/document/d/e/2PACX-1vSUtMgoKlxVUbJRIDj7AWehDqpWg7U9POL06E4xOsmE3HfPI3SdpnmgtP1xXzOl0dRrCPXU2QuHE13I/pub'><a target='_blank'>Resume</a></Link>
           <p className='font-thin mb-1 mx-1 mobile:hidden'>|</p>
           <Link href='https://www.youtube.com/channel/UCGPSDan8oaEvppSeaLNkofg'><a target='_blank' className='mobile:hidden'><FaYoutube/></a></Link>
           <Link href='https://github.com/pokeblokdude'><a target='_blank' className='mobile:hidden'><FaGithub/></a></Link>
