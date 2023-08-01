@@ -5,6 +5,8 @@ import React from 'react'
 import Footer from '../../components/Footer'
 import MediaItem from '../../components/MediaItem'
 import YoutubeVideo from '../../components/YoutubeVideo'
+import Modal from 'react-modal';
+import ReactPlayer from 'react-player/youtube'
 
 const {google} = require('googleapis');
 const youtube = google.youtube({
@@ -162,6 +164,39 @@ const Game = ({ recentUploads }) => {
           .
         </p>
       </div>
+
+      <Modal
+        isOpen={modalOpen}
+        shouldCloseOnOverlayClick={true}
+        onRequestClose={closeModal}
+        style={{
+          overlay: {
+            backgroundColor: 'hsla(0, 0%, 0%, 0.6)',
+            backdropFilter: 'blur(4px)',
+            zIndex: '20'
+          },
+          content: {
+            padding: '0px',
+            border: '1px solid hsl(0, 0%, 20%)',
+            background: 'hsl(0, 0%, 5%)',
+            //top: '150px',
+            bottom: '150px',
+            //left: '100px',
+            right: '100px',
+            height: 'fit-content',
+            maxWidth: '1920px',
+            minWidth: '900px',
+            left: '40%',
+            top: '50%',
+            transform: 'translate(-32%, -50%)'
+          }
+        }}
+      >
+        <div className="aspect-video">
+          <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
+        </div>
+      </Modal>
+
       <Footer />
     </>
   )
