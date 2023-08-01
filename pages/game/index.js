@@ -133,7 +133,7 @@ const Game = ({ recentUploads }) => {
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Game Dev Videos</h1>
         <p className="w-[95%] self-center mt-[-32px] ml-2">
           My YouTube channel,&nbsp;
-          <Link href='https://www.youtube.com/@poke_'>
+          <Link href='https://www.youtube.com/@poke_gamedev'>
             <a target='_blank' className='font-mono font-semibold hover:underline hover:cursor-pointer'>Poke Dev</a>
           </Link>
           , is where I post videos about game dev stuff.
@@ -156,7 +156,7 @@ const Game = ({ recentUploads }) => {
         </div>
         <p className="w-[95%] self-center mt-4">
           Check out the rest of my videos&nbsp;
-          <Link href="https://www.youtube.com/channel/UCQByWFfXIWnpKjUA45ziW8A">
+          <Link href="https://www.youtube.com/@poke_gamedev/videos">
             <a target='_blank' className="font-mono font-semibold underline hover:cursor-pointer">here</a>
           </Link>
           .

@@ -3,7 +3,10 @@ import { FaGithub, FaYoutube, FaLinkedin } from 'react-icons/fa'
 
 const Navbar = () => {
   return (
-      <nav className="w-full h-12 flex items-center justify-between border-b border-neutral-700 mobile:flex-col mobile:h-24 mobile:justify-center">
+      <nav 
+        className="w-full h-12 flex items-center justify-between border-b border-neutral-700 mobile:flex-col mobile:h-24 
+                  mobile:justify-center sticky top-0 z-50 bg-neutral-900"
+        >
         <div>
           <Link href='/'><a className="ml-5 text-xl font-sans font-semibold text-white mobile:text-3xl mobile:ml-0">Alex Howe</a></Link>
         </div>

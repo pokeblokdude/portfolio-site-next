@@ -362,7 +362,7 @@ const Video = ({ recentUploads }) => {
         </div>
         <p className="w-[95%] self-center mt-4">
           Check out the rest of my videos&nbsp;
-          <Link href="https://www.youtube.com/channel/UCgq8JFvB45kRq_uq6az60PQ">
+          <Link href="https://www.youtube.com/@poke_/videos">
             <a target='_blank' className="font-mono font-semibold underline hover:cursor-pointer">here</a>
           </Link>
           .
