@@ -4,8 +4,52 @@ import Image from 'next/image'
 import React from 'react'
 import Footer from '../../components/Footer'
 import MediaItem from '../../components/MediaItem'
+import YoutubeVideo from '../../components/YoutubeVideo'
 
-const Game = () => {
+const {google} = require('googleapis');
+const youtube = google.youtube({
+  version: 'v3',
+  auth: process.env.YT_KEY
+});
+
+export const getStaticProps = async () => {
+  
+  const res = await youtube.search.list({
+    part: 'snippet',
+    channelId: 'UCQByWFfXIWnpKjUA45ziW8A',
+    order: 'date',
+    type: 'video',
+    maxResults: '4'
+  })
+  const data = res.data;
+
+  //console.log(data.items);
+  
+  const videos = [];
+  data.items.map(v => {
+    videos.push(v);
+  })
+
+  return {
+    props: {
+      recentUploads: videos
+    },
+    revalidate: 60
+  };
+}
+
+const Game = ({ recentUploads }) => {
+
+  const [ modalOpen, setModalOpen ] = React.useState(false);
+  const [ videoUrl, setVideoUrl ] = React.useState('');
+
+  const openModal = () => {
+    setModalOpen(true);
+  }
+  const closeModal = () => {
+    setModalOpen(false);
+  }
+
   return (
     <>
       <Head>
@@ -85,6 +129,38 @@ const Game = () => {
             bgDarkness={70}
           />
         </div>
+
+        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Game Dev Videos</h1>
+        <p className="w-[95%] self-center mt-[-32px] ml-2">
+          My YouTube channel,&nbsp;
+          <Link href='https://www.youtube.com/@poke_'>
+            <a target='_blank' className='font-mono font-semibold hover:underline hover:cursor-pointer'>Poke Dev</a>
+          </Link>
+          , is where I post videos about game dev stuff.
+        </p>
+        <h2 className="text-lg w-[95%] self-center mt-4 mb-1 ml-1">Recent Uploads</h2>
+        <div className="flex w-[95%] self-center flex-wrap justify-center">
+          {
+            recentUploads.map(
+              vid => <YoutubeVideo 
+                        title={vid.snippet.title}
+                        thumbUrl={vid.snippet.thumbnails.high.url}
+                        url={`https://www.youtube.com/watch?v=${vid.id.videoId}`}
+                        date={vid.snippet.publishedAt}
+                        key={vid.etag}
+                        setVideoUrl={setVideoUrl}
+                        setModalOpen={setModalOpen}
+                      />
+            )
+          }
+        </div>
+        <p className="w-[95%] self-center mt-4">
+          Check out the rest of my videos&nbsp;
+          <Link href="https://www.youtube.com/channel/UCQByWFfXIWnpKjUA45ziW8A">
+            <a target='_blank' className="font-mono font-semibold underline hover:cursor-pointer">here</a>
+          </Link>
+          .
+        </p>
       </div>
       <Footer />
     </>

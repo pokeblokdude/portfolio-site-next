@@ -344,7 +344,7 @@ const Video = ({ recentUploads }) => {
           </Link>
           , where I post video essays, mostly covering video games and film.
         </p>
-        <h2 className="text-lg w-[95%] self-center mt-4 mb-2 ml-1">Recent Uploads</h2>
+        <h2 className="text-lg w-[95%] self-center mt-4 mb-1 ml-1">Recent Uploads</h2>
         <div className="flex w-[95%] self-center flex-wrap justify-center">
           {
             recentUploads.map(
@@ -353,7 +353,9 @@ const Video = ({ recentUploads }) => {
                         thumbUrl={vid.snippet.thumbnails.high.url}
                         url={`https://www.youtube.com/watch?v=${vid.id.videoId}`}
                         date={vid.snippet.publishedAt}
-                        key={vid.etag} 
+                        key={vid.etag}
+                        setVideoUrl={setVideoUrl}
+                        setModalOpen={setModalOpen}
                       />
             )
           }

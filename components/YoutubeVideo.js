@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 
-const YoutubeVideo = ({ title, thumbUrl, url, date }) => {
+const YoutubeVideo = ({ title, thumbUrl, url, date, setVideoUrl, setModalOpen }) => {
 
   const d = new Date(date);
   const dateString = d.toDateString('en-US');
@@ -11,11 +11,17 @@ const YoutubeVideo = ({ title, thumbUrl, url, date }) => {
   titleString = title.replace(/&#39;/g, '\'');
 
   return (
-    <div className='flex flex-col w-[576px] my-3 mx-6'>
-      <a href={url} target='_blank' rel='noreferrer noopener' className='flex  w-full h-[324px] relative'>
+    <div 
+      className='flex flex-col w-1/2 my-3 mobile:w-full hover:cursor-pointer'
+      onClick={() => {
+        setVideoUrl(url);
+        setModalOpen(true);
+      }}
+    >
+      <div href={url} target='_blank' rel='noreferrer noopener' className='flex  w-full aspect-video relative'>
         <Image src={thumbUrl} alt='' layout='fill' className='object-cover' loading='eager'/>
-      </a>
-      <a href={url} target='_blank' rel='noreferrer noopener'><h2 className='font-mono mt-2 ml-1 truncate'>{titleString}</h2></a>
+      </div>
+      <h2 className='font-mono mt-2 ml-1 truncate w-[97%]'>{titleString}</h2>
       <p className='ml-1 text-sm text-neutral-400'>{dateString}</p>
     </div>
   )
