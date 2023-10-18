@@ -57,24 +57,23 @@ export default function Home() {
             <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
 
             <MediaItem 
-              title='Simple Renderer'
-              imageSrc='/bg/bg-renderer.PNG'
+              title='OpenGL Renderer'
+              imageSrc='/bg/bg-opengl.PNG'
               imagePos='object-center'
-              date='Apr. 2023.'
+              date='Oct. 2023 (WIP).'
               description={[
                 <p className="leading-loose" key='a'>
-                  An extremely bare-bones software renderer written (almost) from scratch in C++. It uses SDL2 for windowing and drawing the final image, 
-                  and GLM for vector/matrix math. 
-                </p>
+                  A basic hardware renderer made in C++, using GLFW, GLM, and Dear ImGui. There is a moveable, resizable debug menu, and the
+                  camera can be moved using first-person controls (WASD).
+                </p>,
               ]}
-              videoUrl='https://youtu.be/Jkmh4wZ8KXU'
               isVideo={false}
-              links={[{text: "View source on GitHub.", url: "https://github.com/pokeblokdude/simple-renderer"}]}
               halfWidth={false}
-              setVideoUrl={setVideoUrl}
-              setModalOpen={setModalOpen}
-              bgDarkness={70}
               frontPage={true}
+              links={[
+                { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/opengl-renderer' }
+              ]}
+              bgDarkness={70}
             />
 
             <MediaItem 

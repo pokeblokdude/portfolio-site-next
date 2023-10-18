@@ -15,65 +15,82 @@ const Code = () => {
         <h1 className="text-2xl font-semibold w-[95%] my-10">Code</h1>
         
         <MediaItem 
-          title='00. Simple Renderer'
-          imageSrc='/bg/bg-renderer.PNG'
+          title='00. OpenGL Renderer'
+          imageSrc='/bg/bg-opengl.PNG'
           imagePos='object-center'
-          date='Apr. 2023.'
+          date='Oct. 2023 (WIP).'
           description={[
-            <p className="leading-loose" key='a'>
-              An extremely bare-bones software renderer written (almost) from scratch in C++. It uses SDL2 for windowing and drawing the final image, 
-              and GLM for vector/matrix math. 
+            <p className="leading-loose mobile:leading-relaxed" key='a'>
+              A basic hardware renderer made in C++, using GLFW, GLM, and Dear ImGui.
             </p>,
-            <p className='leading-loose mt-3' key='b'>
-              Rendering a scene with 2 shapes (14 tris) takes about 1.5ms on a release build; currently all the shapes are hard-coded, and there is no lighting. The only vertex attribute supported is color.
+            <p className='mt-2 leading-loose mobile:leading-relaxed' key='b'>
+              Currently, the shapes are hard-coded primitives, and there is no scene hierarchy. <span className='mobile:hidden'>The &ldquo;lighting&rdquo;
+              is also faked in the shader, based on the camera position.</span> There is a moveable, resizable debug menu made
+              with ImGui.&nbsp;
+              <span className='mobile:hidden'>It has interactable sliders for the camera attributes, and shows framerate and mouse position info.</span>
             </p>,
-            <p className='leading-loose mt-3' key='c'>
-              If I come back to this project in the future, 
-              I&apos;d like to add support for standard 3D models, as well as some basic lighting/shading.
-            </p>,
+            <p className="leading-loose mobile:leading-relaxed mt-2" key='c'>
+              The camera can be moved around using standard first-person controls (WASD) when holding down right click.&nbsp;
+              <span className='mobile:hidden'>Wireframe
+              view can be toggled on/off from the debug window.</span>
+            </p>
           ]}
           isVideo={false}
           halfWidth={false}
           links={[
-            { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/simple-renderer' }
+            { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/opengl-renderer' }
           ]}
           bgDarkness={70}
         />
 
+        <div className='flex w-[95%] mobile:flex-col mobile:w-full items-center'>
+          <MediaItem 
+            title='01. Simple Renderer'
+            imageSrc='/bg/bg-renderer.PNG'
+            imagePos='object-center'
+            date='Apr. 2023.'
+            description={[
+              <p className="leading-relaxed" key='a'>
+                An extremely bare-bones software renderer written (almost) from scratch in C++, using SDL2 and GLM. 
+              </p>,
+              <p className='leading-relaxed mt-2' key='b'>
+                Rendering a scene with 2 shapes takes about 1.5ms on a release build. If I come back to this project in the future, 
+                I&apos;d like to add support for 3D model import, as well as basic lighting.
+              </p>,
+            ]}
+            isVideo={false}
+            halfWidth={true}
+            links={[
+              { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/simple-renderer' }
+            ]}
+            bgDarkness={70}
+          />
+          <MediaItem 
+            title='02. Breakout! for Arduino'
+            imageSrc='/bg/bg-breakout.jpg'
+            imagePos='object-center'
+            date='Dec. 2022.'
+            description={[
+              <p className="leading-relaxed" key='a'>
+                <span className='font-mono font-bold italic'>Breakout!</span> &nbsp;was my semester project
+                for CS 335 at UMass Amherst. My original plan was to make a simple 3D renderer, but
+                the LCD wouldn&apos;t work with the Arduino Nano boards we were given.
+                In order to use the screen&apos;s 8-bit parallel mode, I switched to an Arduino Uno
+                (much slower), and decided to make a <span className='italic'>Breakout</span> clone
+                instead.
+              </p>,
+            ]}
+            isVideo={false}
+            halfWidth={true}
+            links={[
+              { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/cs335-breakout-project' }
+            ]}
+            bgDarkness={70}
+          />
+        </div>
+        
         <MediaItem 
-          title='01. Breakout! for Arduino'
-          imageSrc='/bg/bg-breakout.jpg'
-          imagePos='object-center'
-          date='Dec. 2022.'
-          description={[
-            <p className="leading-relaxed" key='a'>
-              <span className='font-mono font-bold italic'>Breakout!</span> &nbsp;was my semester-long project
-              for CS 335<span className='mobile:hidden'> - Inside the Box at UMass Amherst</span>. My original plan was to make a simple 3D renderer, but
-              the LCD <span className='mobile:hidden'>I had</span> wouldn&apos;t work with the Arduino Nano board we were given <span className='mobile:hidden'>(SPI would work, but it was way
-              too slow). In order to use the screen&apos;s 8-bit parallel mode, I switched to an Arduino Uno,
-              which is much slower than the Nano</span>. Thus, I decided to make a <span className='italic'>Breakout</span> clone
-              instead.
-            </p>,
-            <p className="leading-loose mt-2 mobile:hidden" key='b'>
-              Here are some of the things I accomplished:
-            </p>,
-            <ul className='list-disc ml-5 leading-relaxed mobile:hidden' key='c'>
-              <li>Graphics math library (originally intended for rendering) with vector & matrix implementations</li>
-              <li>5 levels (and a very simple way of coding new ones)</li>
-              <li>&quot;Animated&quot; title screen</li>
-              <li>Pause, game-over and win screens</li>
-            </ul>,
-          ]}
-          isVideo={false}
-          halfWidth={false}
-          links={[
-            { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/cs335-breakout-project' }
-          ]}
-          bgDarkness={70}
-        />
-
-        <MediaItem 
-          title='02. UKG Job Referral Tool'
+          title='03. UKG Job Referral Tool'
           imageSrc='/bg/bg-ukg.PNG'
           imagePos='object-top'
           date='Dec. 2021.'
@@ -106,7 +123,7 @@ const Code = () => {
         />
 
         <MediaItem 
-          title='03. Our House Bot'
+          title='04. Our House Bot'
           imageSrc='/bg/bg-ourhousebot.PNG'
           imagePos='object-top'
           date='2020.'
@@ -152,7 +169,7 @@ const Code = () => {
         />
 
         <div className='w-[95%] flex flex-col mt-10'>
-          <h2 className="pl-1 font-mono">03. This Website :)</h2>
+          <h2 className="pl-1 font-mono">05. This Website :)</h2>
           <p className="text-sm text-neutral-400 font-mono mb-2 ml-4 mt-2 w-full max-w-[1366px] self-center">Dec. 2021 (ongoing)</p>
           <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
             <a target='_blank' className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px] w-fit text-neutral-400'>View source on GitHub.</a>

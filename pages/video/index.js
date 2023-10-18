@@ -61,11 +61,11 @@ const Video = ({ recentUploads }) => {
       </Head>
       <div className="w-full max-w-[1366px] flex flex-col mb-20">
 
-      <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Reel</h1>
+        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Reel</h1>
 
-      <div className="w-[95%] aspect-video self-center mb-8">
-        <ReactPlayer url='https://youtu.be/vifiwWY8VtY' width='100%' height='100%' controls={true}/>
-      </div>
+        <div className="w-[95%] aspect-video self-center mb-8">
+          <ReactPlayer url='https://youtu.be/vifiwWY8VtY' width='100%' height='100%' controls={true}/>
+        </div>
 {/* ============================================== FILMS ================================================================================= */}
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Films</h1>
 
