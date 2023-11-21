@@ -7,7 +7,7 @@ const Footer = ({ sticky }) => {
       className="w-full h-14 bg-neutral-900 flex items-center justify-center pt-1 border-t border-neutral-700 border-solid mobile:h-20 mobile:flex-col"
     >
       <div className='w-full h-14 bg-neutral-900 flex items-center justify-center mobile:flex-col mobile:h-16 mobile:mt-4'>
-        <p className="font-light text-neutral-300">I made this site using Next.js and Tailwind CSS.</p>
+        <p className="font-light text-neutral-300">© Alex Howe 2023</p>
         <p className='font-light m-2 text-neutral-300 mobile:hidden'>|</p>
         <div className='flex items-center'>
           <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
@@ -17,7 +17,7 @@ const Footer = ({ sticky }) => {
         </div>
       </div>
       <p className="font-light text-neutral-400 text-center text-xs min-w-fit mr-6 mobile:pb-2 mobile:mt-2">
-        Last updated: 10/18/23
+        Last updated: 11/21/23
       </p>
     </div>
   )

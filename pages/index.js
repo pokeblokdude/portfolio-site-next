@@ -57,6 +57,29 @@ export default function Home() {
             <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
 
             <MediaItem 
+              title='aim_puma (Counter-Strike 2)'
+              imageSrc='/bg/bg-puma.jpg'
+              imagePos='object-center'
+              date='Nov. 2023.'
+              description={[
+                <p className="leading-relaxed min:leading-relaxed" key='a'>
+                  <span className='font-mono font-bold italic'>aim_puma</span> &nbsp; is a 1v1 map I designed to learn the new Source 2 mapping tools
+                  that shipped with CS2. The initial design and layout went through many rounds of iteration, with at least one playtest after each
+                  update.
+                </p>,
+              ]}
+              links={[
+                { text: 'View on Steam Workshop.', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3071340913' },
+              ]}
+              isVideo={false}
+              halfWidth={false}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
+              bgDarkness={70}
+              frontPage={true}
+            />
+
+            <MediaItem 
               title='OpenGL Renderer'
               imageSrc='/bg/bg-opengl.PNG'
               imagePos='object-center'
@@ -74,27 +97,6 @@ export default function Home() {
                 { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/opengl-renderer' }
               ]}
               bgDarkness={70}
-            />
-
-            <MediaItem 
-              title='Descent'
-              imageSrc='/bg/bg-descent.png'
-              imagePos='object-center'
-              date='Dec. 2022.'
-              description={[
-                <p className="leading-relaxed" key='a'>
-                  <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
-                  how it can spiral endlessly. <span className='mobile:hidden'>It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.</span>
-                  &nbsp;I ended up doing my own music for the first time; I think it turned out really well.
-                </p>
-              ]}
-              videoUrl='https://youtu.be/Jkmh4wZ8KXU'
-              isVideo={true}
-              halfWidth={false}
-              setVideoUrl={setVideoUrl}
-              setModalOpen={setModalOpen}
-              bgDarkness={70}
-              frontPage={true}
             />
 
           </div>

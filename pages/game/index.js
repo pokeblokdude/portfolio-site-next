@@ -90,11 +90,35 @@ const Game = ({ recentUploads }) => {
           bgDarkness={70}
         />
 
-        <h1 className="text-2xl font-semibold w-[95%] self-center mt-10 mb-6">CS:GO Maps</h1>
+        <h1 className="text-2xl font-semibold w-[95%] self-center mt-10 mb-6">Level Design</h1>
+
+        <MediaItem 
+          title='00. aim_puma (Counter-Strike 2)'
+          imageSrc='/bg/bg-puma.jpg'
+          imagePos='object-center'
+          date='Nov. 2023.'
+          description={[
+            <p className="leading-loose min:leading-relaxed" key='a'>
+              <span className='font-mono font-bold italic'>aim_puma</span> &nbsp; is a 1v1 map I designed to learn the new Source 2 mapping tools
+              that shipped with CS2. The initial design and layout went through many rounds of iteration, with at least one playtest after each
+              update.
+            </p>,
+            <p className="leading-loose min:leading-relaxed" key='b'>
+              The jungle ruins/temple theme is based on the preexisting competitive 5v5 map, <span className='italic'>de_ancient,</span> which I think is set in
+              Mexico.
+            </p>,
+          ]}
+          isVideo={false}
+          halfWidth={false}
+          links={[
+            { text: 'View on Steam Workshop.', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3071340913' },
+          ]}
+          bgDarkness={70}
+        />
 
         <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
           <MediaItem 
-            title='00. am_snowpoint'
+            title='01. am_snowpoint (CS:GO)'
             imageSrc='/bg/bg-snowpoint.jpg'
             imagePos='object-center'
             date='Jan. 2020.'
@@ -112,7 +136,7 @@ const Game = ({ recentUploads }) => {
             ]}
           />
           <MediaItem 
-            title='01. de_salisbury'
+            title='02. de_salisbury (CS:GO)'
             imageSrc='/bg/bg-salisbury.jpg'
             imagePos='object-center'
             date='Jan. 2020.'
