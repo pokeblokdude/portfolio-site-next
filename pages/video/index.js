@@ -3,7 +3,6 @@ import Modal from 'react-modal'
 import React from 'react'
 import Head from "next/head"
 import Image from "next/image"
-import Footer from "../../components/Footer"
 import Link from "next/link"
 import MediaItem from "../../components/MediaItem"
 import YoutubeVideo from "../../components/YoutubeVideo"
@@ -59,14 +58,14 @@ const Video = ({ recentUploads }) => {
       <Head>
         <title>Film & Video | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] flex flex-col mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col">
 
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Reel</h1>
 
         <div className="w-[95%] aspect-video self-center mb-8">
           <ReactPlayer url='https://youtu.be/vifiwWY8VtY' width='100%' height='100%' controls={true}/>
         </div>
-{/* ============================================== FILMS ================================================================================= */}
+{/* ============================================== FILMS ========================================================== */}
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Films</h1>
 
         <div className="flex flex-col items-center">
@@ -78,13 +77,15 @@ const Video = ({ recentUploads }) => {
             date='Dec. 2022.'
             description={[
               <p className="leading-loose" key='a'>
-                <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection, introspection, and
-                how it can spiral endlessly. It was my final project for COMM 441 - Intermediate Digital Filmmaking at UMass Amherst.
+                <span className="font-bold italic font-mono">Descent</span> is a short film about self-reflection,
+                introspection, and how it can spiral endlessly. It was my final project for COMM 441 - Intermediate
+                Digital Filmmaking at UMass Amherst.
               </p>,
               <p className="leading-loose mt-4 mobile:hidden" key='b'>
-                I directed, shot and edited the film; there wasn&apos;t really a script, just an outline. I also color graded, did the audio, and additionally 
-                ended up doing my own music for the first time;
-                I think it turned out really well. I&apos;m partiucularly proud of the plucking/bubbling sound. The interiors were shot at Smith College.
+                I directed, shot and edited the film; there wasn&apos;t really a script, just an outline. I also color
+                graded, did the audio, and additionally ended up doing my own music for the first time; I think it
+                turned out really well. I&apos;m partiucularly proud of the plucking/bubbling sound. The interiors were
+                shot at Smith College.
               </p>
             ]}
             videoUrl='https://youtu.be/Jkmh4wZ8KXU'
@@ -103,8 +104,9 @@ const Video = ({ recentUploads }) => {
               date='Oct. 2022.'
               description={[
                 <p className="leading-relaxed" key='a'>
-                  <span className="font-bold italic font-mono">Transmission</span> is a short film about the omnipresence of technology.
-                  &nbsp;It was a project for the &apos;experimental narrative&apos; module of my experimental film class. 
+                  <span className="font-bold italic font-mono">Transmission</span> is a short film about the
+                  omnipresence of technology. It was a project for the &apos;experimental narrative&apos; module of my
+                  experimental film class. 
                 </p>,
                 <p className="leading-relaxed mt-4" key='b'>
                   I directed, shot and edited the film. I also did the color grading and audio editing.
@@ -123,12 +125,15 @@ const Video = ({ recentUploads }) => {
               imagePos='object-center'
               date='May. 2022.'
               description={[
-                <p className="leading-relaxed" key='a'><span className="font-bold italic font-mono">Cordelia Lear</span> is a short film production 
-                  of a play written by Smith College professor Len Berkman. The monologue is set inside of William Shakespeare&apos;s  
-                  <span className="italic"> King Lear,</span> following the inner journey of the king&apos;s daughter, Cordelia.
+                <p className="leading-relaxed" key='a'>
+                  <span className="font-bold italic font-mono">Cordelia Lear</span> is a short film production 
+                  of a play written by Smith College professor Len Berkman. The monologue is set inside of William
+                  Shakespeare&apos;s <span className="italic"> King Lear,</span> following the inner journey of the
+                  king&apos;s daughter, Cordelia.
                 </p>,
                 <p className="leading-relaxed mt-2" key='b'>
-                  I was co-cinematographer alongside my friend, Harrison Tan. I also edited, color graded, and did sound editing.
+                  I was co-cinematographer alongside my friend, Harrison Tan. I also edited, color graded, and did
+                  sound editing.
                 </p>
               ]}
               videoUrl='https://youtu.be/4PQoo0MQVQA'
@@ -145,9 +150,10 @@ const Video = ({ recentUploads }) => {
             imagePos='object-center'
             date='Dec. 2018.'
             description={[
-              <p className="leading-loose mobile:leading-relaxed" key='a'><span className="font-bold italic font-mono">The Machine</span> was my final project for 
-                VM120 - Foundations in Media Arts Production at Emerson College. 
-                It&apos;s a psychological-horror-themed short film about a young man coming to terms with the future<span className="desktop:hidden">.</span> 
+              <p className="leading-loose mobile:leading-relaxed" key='a'>
+                <span className="font-bold italic font-mono">The Machine</span> was my final project for VM120 -&nbsp;
+                Foundations in Media Arts Production at Emerson College. It&apos;s a psychological-horror-themed short
+                film about a young man coming to terms with the future<span className="desktop:hidden">.</span> 
                 <span className="mobile:hidden">, inspired by some of the darker episodes of 
                 <span className="italic"> Doctor Who</span> and <span className="italic">Black Mirror.</span></span>
               </p>,
@@ -173,8 +179,8 @@ const Video = ({ recentUploads }) => {
                 <p className="leading-loose" key='a'>
                   <span className="font-mono font-bold italic">G.S.P.</span> 
                   &nbsp;was a short film I did for my high school senior project, inspired primarily by 
-                  Denis Villenueve&apos;s <span className="italic">Blade Runner 2049. G.S.P.</span> was my first short film;
-                  I wrote, directed, shot and edited it. The music is by Caleb Kennedy.
+                  Denis Villenueve&apos;s <span className="italic">Blade Runner 2049. G.S.P.</span> was my first short
+                  film; I wrote, directed, shot and edited it. The music is by Caleb Kennedy.
                 </p>
               ]}
               videoUrl='https://www.youtube.com/watch?v=GzvWQ_fnKt0'
@@ -192,7 +198,8 @@ const Video = ({ recentUploads }) => {
                 <p className="leading-loose" key='a'>
                   <span className="font-mono font-bold italic">A Time-Lapse Journey through 2016 </span>was the 
                   project that got me into film. Using my first DSLR camera, I shot various landscapes around my home
-                  in western Massachusetts. The film is set to music from C418&apos;s <span className="italic">Minecraft - Volume Beta.</span>
+                  in western Massachusetts. The film is set to music from C418&apos;s&nbsp;
+                  <span className="italic">Minecraft - Volume Beta.</span>
                 </p>
               ]}
               videoUrl='https://www.youtube.com/watch?v=RWq_bcAp9As'
@@ -204,7 +211,7 @@ const Video = ({ recentUploads }) => {
           </div>
         </div>
 
-{/* ============================================== VIDEOS ================================================================================= */}
+{/* ============================================== VIDEOS ====================================================== */}
         <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Videos</h1>
 
         <div className="flex flex-col items-center">
@@ -218,12 +225,14 @@ const Video = ({ recentUploads }) => {
               <p className="leading-loose mobile:leading-relaxed" key='a'>
                 <span className="font-mono font-bold italic">Passing By </span> 
                 is a music video I shot for my friend Gruff Davies, who wrote and performed the song under his
-                artist name, <span className="italic">Suncaster.</span> <span className="mobile:hidden">Most footage in the video was shot at various locations 
-                around our home in western Massachusetts, with a few stock clips for the greenscreen section.</span>
+                artist name, <span className="italic">Suncaster.</span> <span className="mobile:hidden">Most footage
+                in the video was shot at various locations around our home in western Massachusetts, with a few stock
+                clips for the greenscreen section.</span>
               </p>,
-              <p className="leading-loose mobile:leading-relaxed mt-4 mobile:mt-1" key='b'>
-                <span className="mobile:hidden">I directed, shot, edited, and color graded the video.</span> I was going for kind of a retro vibe with the 
-                4:3 aspect ratio and heavy film grain and glow. <span className="mobile:hidden">Personally I think it looks really good.</span>
+              <p className="leading-loose mobile:leading-relaxed mt-2 mobile:mt-1" key='b'>
+                <span className="mobile:hidden">I directed, shot, edited, and color graded the video.</span> I was
+                going for kind of a retro vibe with the 4:3 aspect ratio and heavy film grain and glow.&nbsp;
+                <span className="mobile:hidden">Personally I think it looks really good.</span>
               </p>
             ]}
             videoUrl='https://youtu.be/TiyuKP6-zzI'
@@ -241,13 +250,15 @@ const Video = ({ recentUploads }) => {
             description={[
               <p className="leading-loose" key='a'>
                 <span className="font-mono font-bold italic">CS:GO - Zeitgeist </span>
-                is a frag movie I made using moments from me and my friends&apos; gameplay in Valve&apos;s tactical shooter,
-                <span className="italic"> Counter-Strike: Global Offensive. </span>
-                <span className="mobile:hidden">Footage was captured using the game&apos;s built-in &quot;demo&quot; replay system, as well as a third party tool
-                called Half-Life Advanced Effects for keyframing camera moves. I rebuilt stylized UI elements using Adobe After Effects.</span>
+                is a frag movie I made using moments from me and my friends&apos; gameplay in Valve&apos;s tactical
+                shooter, <span className="italic"> Counter-Strike: Global Offensive. </span>
+                <span className="mobile:hidden">Footage was captured using the game&apos;s built-in &quot;demo&quot;
+                replay system, as well as a third party tool called Half-Life Advanced Effects for keyframing camera
+                moves. I rebuilt stylized UI elements using Adobe After Effects.</span>
               </p>,
               <p className="leading-loose mt-4 mobile:hidden" key='b'>
-                The music used is &quot;Zeitgeist&quot; by <span className="italic">Savant,</span> hence the title of the video.
+                The music used is &quot;Zeitgeist&quot; by <span className="italic">Savant,</span> hence the title of
+                the video.
               </p>
             ]}
             videoUrl='https://youtu.be/wuCA8XTfaSg'
@@ -284,9 +295,10 @@ const Video = ({ recentUploads }) => {
               date='Jun. 2018'
               description={[
                 <p className="leading-loose" key='a'>
-                  <span className="font-mono font-bold italic">Senior Class Trip to Puerto Rico</span> is a vlog-style documentation
-                  of my high school class&apos;s senior trip. We went to Puerto Rico in the wake of Hurricane Maria to help a local organiztion
-                  in building sustainable shelter/school buildings and gardens out of recycled materials and bamboo.
+                  <span className="font-mono font-bold italic">Senior Class Trip to Puerto Rico</span> is a vlog-style
+                  documentation of my high school class&apos;s senior trip. We went to Puerto Rico in the wake of
+                  Hurricane Maria to help a local organiztion in building sustainable shelter/school buildings and
+                  gardens out of recycled materials and bamboo.
                 </p>
               ]}
               videoUrl='https://www.youtube.com/watch?v=b9i07oCLcPc'
@@ -305,8 +317,9 @@ const Video = ({ recentUploads }) => {
               date='Feb. 2020'
               description={[
                 <p className="leading-loose" key='a'>
-                  My girlfriend and I took her dog, Nugget, for a walk at Amethyst Brook, a nature reserve in Amherst, MA.
-                  The video is set to music from <span className="italic">The Legend of Zelda: Breath of the Wild.</span>
+                  My girlfriend and I took her dog, Nugget, for a walk at Amethyst Brook, a nature reserve in Amherst,
+                  MA. The video is set to music from&nbsp;
+                  <span className="italic">The Legend of Zelda: Breath of the Wild.</span>
                 </p>
               ]}
               videoUrl='https://www.youtube.com/watch?v=VqklE9kNjbQ'
@@ -340,11 +353,16 @@ const Video = ({ recentUploads }) => {
         <p className="w-[95%] self-center mt-[-32px] ml-2">
           I have a YouTube channel,&nbsp;
           <Link href='https://www.youtube.com/@poke_'>
-            <a target='_blank' className='font-mono font-semibold hover:underline hover:cursor-pointer'>Poke</a>
+            <a
+              target='_blank'
+              className='font-mono font-semibold hover:underline hover:cursor-pointer hover:text-neutral-300'
+            >
+              Poke
+            </a>
           </Link>
           , where I post video essays, mostly covering video games and film.
         </p>
-        <h2 className="text-lg w-[95%] self-center mt-4 mb-1 ml-1">Recent Uploads</h2>
+        <h2 className="text-lg w-[95%] self-center mt-6">Recent Uploads</h2>
         <div className="flex w-[95%] self-center flex-wrap justify-center">
           {
             recentUploads.map(
@@ -363,7 +381,12 @@ const Video = ({ recentUploads }) => {
         <p className="w-[95%] self-center mt-4">
           Check out the rest of my videos&nbsp;
           <Link href="https://www.youtube.com/@poke_/videos">
-            <a target='_blank' className="font-mono font-semibold underline hover:cursor-pointer">here</a>
+            <a
+              target='_blank'
+              className="font-mono font-semibold underline hover:cursor-pointer hover:text-neutral-300"
+            >
+                here
+            </a>
           </Link>
           .
         </p>
@@ -400,7 +423,6 @@ const Video = ({ recentUploads }) => {
           <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
         </div>
       </Modal>
-      <Footer />
     </>
   )
 }

@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 import React from 'react'
-import Footer from '../../components/Footer'
 import MediaItem from '../../components/MediaItem'
 import YoutubeVideo from '../../components/YoutubeVideo'
 import Modal from 'react-modal';
@@ -57,7 +55,7 @@ const Game = ({ recentUploads }) => {
       <Head>
         <title>Game | Alex Howe</title>
       </Head>
-      <div className="w-full max-w-[1366px] flex flex-col items-center mb-20">
+      <div className="w-full max-w-[1366px] flex flex-col items-center">
         <h1 className="text-2xl font-semibold w-[95%] self-center mt-10 mb-6">Games</h1>
         
         <MediaItem 
@@ -74,18 +72,19 @@ const Game = ({ recentUploads }) => {
               </Link>
               &nbsp;with the theme, &quot;You Are the Enemy.&quot;
             </p>,
-            <p className='leading-loose min:leading-relaxed mt-4 mobile:hidden' key='b'>
-              The game is 3D, with 2D, paper-like graphics inspired by the <span className='italic'>Paper Mario</span> series. The goal is to
-              jump around and knock stuff over, causing the guy to walk over and fix it. If you distract him for long enough, you can light the
-              oven on fire to burn down the house. At first we were planning on making it a puzzle game, but eventually we settled on something
-              more akin to <span className='italic'>Untitled Goose Game,</span> where the goal is basically just to cause havoc.
+            <p className='leading-loose min:leading-relaxed mt-2 mobile:hidden' key='b'>
+              The game is 3D, with 2D, paper-like graphics inspired by the <span className='italic'>Paper Mario</span>
+              &nbsp;series. The goal is to jump around and knock stuff over, causing the guy to walk over and fix it.
+              If you distract him for long enough, you can light the oven on fire to burn down the house. At first we
+              were planning on making it a puzzle game, but eventually we settled on something more akin to&nbsp;
+              <span className='italic'>Untitled Goose Game,</span> where the goal is basically just to cause havoc.
             </p>
           ]}
           isVideo={false}
           halfWidth={false}
           links={[
-            { text: 'Play on Itch.io.', url: 'https://poke-bd.itch.io/cataclysm' },
-            { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/cat-game' }
+            { text: 'Play on Itch.io.', url: 'https://poke-bd.itch.io/cataclysm', ext: true },
+            { text: 'View source on GitHub.', url: 'https://github.com/pokeblokdude/cat-game', ext: true }
           ]}
           bgDarkness={70}
         />
@@ -99,19 +98,23 @@ const Game = ({ recentUploads }) => {
           date='Nov. 2023.'
           description={[
             <p className="leading-loose min:leading-relaxed" key='a'>
-              <span className='font-mono font-bold italic'>aim_puma</span> &nbsp; is a 1v1 map I designed to learn the new Source 2 mapping tools
-              that shipped with CS2. The initial design and layout went through many rounds of iteration, with at least one playtest after each
-              update.
+              <span className='font-mono font-bold italic'>aim_puma</span> &nbsp; is a 1v1 map I designed to learn the
+              new Source 2 mapping tools that shipped with CS2. The initial design and layout went through many rounds
+              of iteration, with at least one playtest after each update.
             </p>,
             <p className="leading-loose min:leading-relaxed" key='b'>
-              The jungle ruins/temple theme is based on the preexisting competitive 5v5 map, <span className='italic'>de_ancient,</span> which I think is set in
-              Mexico.
+              The jungle ruins/temple theme is based on the preexisting competitive 5v5 map,&nbsp;
+              <span className='italic'>de_ancient,</span> which I think is set in Mexico.
             </p>,
           ]}
           isVideo={false}
           halfWidth={false}
           links={[
-            { text: 'View on Steam Workshop.', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3071340913' },
+            {
+              text: 'View on Steam Workshop.',
+              url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=3071340913',
+              ext: true
+            },
           ]}
           bgDarkness={70}
         />
@@ -125,14 +128,19 @@ const Game = ({ recentUploads }) => {
             description={[
               <p className="leading-loose min:leading-relaxed" key='a'>
                 <span className="font-mono font-bold italic">am_snowpoint</span> is a 1v1 map meant to be used
-                with splewis&apos; &quot;multi1v1&quot; server plugin. The map is named snowpoint after the city from&nbsp;
-                <span className='italic'>Pokemon Diamond and Pearl</span>, which inspired the wintery research-site theme.
+                with splewis&apos; &quot;multi1v1&quot; server plugin. The map is named snowpoint after the city from
+                <span className='italic'> Pokemon Diamond and Pearl</span>, which inspired the wintery research-site
+                theme.
               </p>
             ]}
             isVideo={false}
             halfWidth={true}
             links={[
-              { text: 'View on Steam Workshop.', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1980557586' }
+              {
+                text: 'View on Steam Workshop.',
+                url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=1980557586',
+                ext: true
+              }
             ]}
           />
           <MediaItem 
@@ -143,14 +151,18 @@ const Game = ({ recentUploads }) => {
             description={[
               <p className="leading-loose min:leading-relaxed" key='a'>
                   <span className='font-mono font-bold italic'>de_salisbury</span> is an unfinished map meant
-                  for CS:GO&apos;s 2v2 &quot;Wingman&quot; mode, with one central bombsite. It&apos;s named after Salisbury, MA, a town
-                  close to where I grew up. It also fits the coastal theme.
+                  for CS:GO&apos;s 2v2 &quot;Wingman&quot; mode, with one central bombsite. It&apos;s named after
+                  Salisbury, MA, a town close to where I grew up. It also fits the coastal theme.
                 </p>
             ]}
             isVideo={false}
             halfWidth={true}
             links={[
-              { text: 'View on Steam Workshop.', url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2016705263' }
+              {
+                text: 'View on Steam Workshop.',
+                url: 'https://steamcommunity.com/sharedfiles/filedetails/?id=2016705263',
+                ext: true
+              }
             ]}
             bgDarkness={70}
           />
@@ -160,11 +172,16 @@ const Game = ({ recentUploads }) => {
         <p className="w-[95%] self-center mt-[-32px] ml-2">
           My YouTube channel,&nbsp;
           <Link href='https://www.youtube.com/@poke_gamedev'>
-            <a target='_blank' className='font-mono font-semibold hover:underline hover:cursor-pointer'>Poke Dev</a>
+            <a
+              target='_blank'
+              className='font-mono font-semibold hover:underline hover:cursor-pointer hover:text-neutral-300'
+            >
+              Poke Dev
+            </a>
           </Link>
           , is where I post videos about game dev stuff.
         </p>
-        <h2 className="text-lg w-[95%] self-center mt-4 mb-1 ml-1">Recent Uploads</h2>
+        <h2 className="text-lg w-[95%] self-center mt-6">Recent Uploads</h2>
         <div className="flex w-[95%] self-center flex-wrap justify-center">
           {
             recentUploads.map(
@@ -183,7 +200,12 @@ const Game = ({ recentUploads }) => {
         <p className="w-[95%] self-center mt-4">
           Check out the rest of my videos&nbsp;
           <Link href="https://www.youtube.com/@poke_gamedev/videos">
-            <a target='_blank' className="font-mono font-semibold underline hover:cursor-pointer">here</a>
+            <a
+              target='_blank'
+              className="font-mono font-semibold underline hover:cursor-pointer hover:text-neutral-300"
+            >
+              here
+            </a>
           </Link>
           .
         </p>
@@ -220,8 +242,6 @@ const Game = ({ recentUploads }) => {
           <ReactPlayer url={videoUrl} width='100%' height='100%' controls={true}/>
         </div>
       </Modal>
-
-      <Footer />
     </>
   )
 }

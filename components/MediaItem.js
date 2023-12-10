@@ -18,7 +18,12 @@ import React from "react";
  * @param {function} setModalOpen opens the video player
  * @returns 
  */
-const MediaItem = ({ title, imageSrc, imagePos, date, description, videoUrl, isVideo, links, bgDarkness = 60, halfWidth, frontPage, setVideoUrl, setModalOpen }) => {
+const MediaItem = (
+  { 
+    title, imageSrc, imagePos, date, description, videoUrl, isVideo, links, bgDarkness = 60, halfWidth, frontPage,
+    setVideoUrl, setModalOpen 
+  }
+) => {
   
   const [ hovering, setHovering ] = React.useState(false);
 
@@ -56,7 +61,15 @@ const MediaItem = ({ title, imageSrc, imagePos, date, description, videoUrl, isV
           width: width
         }}
       >
-        <Image src={imageSrc} layout='fill' className={`object-cover ${imagePos}`} alt='' loading='eager' priority={true} quality={100}/>
+        <Image
+          src={imageSrc}
+          layout='fill'
+          className={`object-cover ${imagePos}`}
+          alt=''
+          loading='eager'
+          priority={true}
+          quality={100}
+        />
         <div
           className={
             `w-full h-full flex flex-col justify-between opacity-0 ${isVideo ? 'hover:cursor-pointer' : ''} 
@@ -93,7 +106,12 @@ const MediaItem = ({ title, imageSrc, imagePos, date, description, videoUrl, isV
               {
                 links.map(link => 
                   <Link href={link.url} key={link.text}>
-                    <a target='_blank' className="text-sm text-neutral-400 font-mono hover:underline hover:cursor-pointer mr-8">{link.text}</a>
+                    <a
+                      target={link.ext ? '_blank' : ''}
+                      className="text-sm text-neutral-400 font-mono hover:underline hover:cursor-pointer mr-8"
+                    >
+                      {link.text}
+                    </a>
                   </Link>
                 )
               }
