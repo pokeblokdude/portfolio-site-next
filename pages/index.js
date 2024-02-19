@@ -29,8 +29,8 @@ export default function Home() {
 
           <div className='w-[48%] h-full items-center flex flex-col mobile:w-[95%]'>
             <h1 className='w-[95%] text-2xl font-semibold mt-6 mb-4'>Bio</h1>
-            <div 
-              className='w-[90%] flex flex-col justify-center items-center h-[500px] relative ml-2 mobile:h-[700px]
+            <div
+              className='w-[95%] flex flex-col justify-center items-center h-[500px] relative ml-2 mobile:h-[700px]
                         mobile:w-[90%] mobile:ml-0'
             >
               <Image
@@ -43,14 +43,14 @@ export default function Home() {
                 quality={100}
               />
             </div>
-            <h2 className="w-[90%] pl-1 mt-2 font-mono text-sm text-neutral-400">Me, playing disc golf :)</h2>
-            <div className='flex flex-col ml-1 w-[90%]'>
-              <p className='mt-4 leading-relaxed min:leading-relaxed w-[95%]'>
-                Hi there! My name is Alex Howe. I&apos;m a filmmaker and hobbyist game developer living in western
-                Massachusetts. I recently graduated from UMass Amherst with a degree in Computer Science and Film
+            <h2 className="w-[95%] pl-1 mt-2 font-mono text-sm text-neutral-400">Me, playing disc golf :)</h2>
+            <div className='flex flex-col ml-1 w-[95%] text-justify'>
+              <p className='mt-4 leading-relaxed min:leading-relaxed w-full'>
+                Hi there! My name is Alex Howe. I&apos;m a filmmaker and hobbyist game developer living in the Boston
+                area. I recently graduated from UMass Amherst with a degree in Computer Science and Film
                 Studies.
               </p>
-              <p className='mt-2 leading-relaxed min:leading-relaxed w-[95%]'>
+              <p className='mt-2 leading-relaxed min:leading-relaxed w-full'>
                 In my free time, I make videos on YouTube, work on games and film ideas, and play video games.
               </p>
             </div>
@@ -61,6 +61,37 @@ export default function Home() {
           <div className='w-1/2 flex flex-col mobile:w-[95%]'>
 
             <h1 className="w-[95%] text-2xl font-semibold mt-6 mb-4">Recent Projects</h1>
+
+            <MediaItem 
+              title='River House Website'
+              imageSrc='/bg/riverhouse.PNG'
+              imagePos='object-top'
+              date='Feb. 2024.'
+              description={[
+                <p className="leading-relaxed mobile:leading-relaxed" key='a'>
+                  A simple full-stack site made using Next.js, Tailwind CSS, and MongoDB.
+                  I created a simple &ldquo;posts&rdquo; system for informing guests about events and updates, styled
+                  using Markdown. Login is handled using Auth0.
+                </p>,
+              ]}
+              links={[
+                { 
+                  text: 'View site.',
+                  url: 'https://www.furnished-rentals.com',
+                  ext: true
+                },
+                {
+                  text: 'View all Code projects →',
+                  url: '/code'
+                }
+              ]}
+              isVideo={false}
+              halfWidth={false}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
+              bgDarkness={70}
+              frontPage={true}
+            />
 
             <MediaItem 
               title='aim_puma (Counter-Strike 2)'
@@ -92,35 +123,6 @@ export default function Home() {
               setModalOpen={setModalOpen}
               bgDarkness={70}
               frontPage={true}
-            />
-
-            <MediaItem 
-              title='OpenGL Renderer'
-              imageSrc='/bg/bg-opengl.PNG'
-              imagePos='object-center'
-              date='Oct. 2023 (WIP).'
-              description={[
-                <p className="leading-loose" key='a'>
-                  A basic hardware renderer made in C++, using GLFW, GLM, and Dear ImGui. 
-                  <span className='min:hidden'> There is a moveable, resizable debug menu, and the camera can be moved
-                  using first-person controls (WASD).</span>
-                </p>,
-              ]}
-              isVideo={false}
-              halfWidth={false}
-              frontPage={true}
-              links={[
-                { 
-                  text: 'View source on GitHub.',
-                  url: 'https://github.com/pokeblokdude/opengl-renderer',
-                  ext: true
-                },
-                {
-                  text: 'View all Code projects →',
-                  url: '/code',
-                }
-              ]}
-              bgDarkness={70}
             />
 
           </div>

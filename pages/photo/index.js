@@ -1,12 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
-import { useRouter } from 'next/router'
+import PhotoAlbum from 'react-photo-album'
+import CollageImage from '../../components/CollageImage'
+
+const photos = [
+  { src: '/photo/janna-telescope.jpg', width: 1920, height: 1281 },
+  { src: '/photo/janna-projector-feet.jpg', width: 1920, height: 1208 },
+  { src: '/photo/projector.jpg', width: 1000, height: 1778 },
+  { src: '/photo/light-trail.jpg', width: 1920, height: 1281 },
+  { src: '/photo/harrison-portrait.jpg', width: 1000, height: 1499 },
+]
 
 const Photo = () => {
-
-  const router = useRouter();
 
   return (
     <>
@@ -20,6 +26,16 @@ const Photo = () => {
         </h1>
         <h3 className='w-full mb-4 mt-1 text-sm text-neutral-400'>This page may take a few seconds to load.</h3>
 
+        {/* <PhotoAlbum
+          layout='rows'
+          photos={photos}
+          targetRowHeight={500}
+          renderPhoto={CollageImage}
+          defaultContainerWidth={1000}
+          sizes={{ size: 'calc(100vw - 240px)' }}
+        /> */}
+
+        
         <h1 className="text-2xl w-full self-center mt-4 mb-4 font-mono" id='digital'>Digital</h1>
         <div className='flex w-full justify-between items-center'>
           <div className="flex w-full h-[773px] relative min:w-full min:h-[242px]">
@@ -488,7 +504,7 @@ const Photo = () => {
             />
           </div>
         </div>
-
+       
       </div>
     </>
   )

@@ -11,8 +11,88 @@ const Code = () => {
         <title>Code | Alex Howe</title>
       </Head>
       <div className="w-full max-w-[1366px] flex flex-col items-center">
-        <h1 className="text-2xl font-semibold w-[95%] my-10">Code</h1>
+        <h1 className="text-2xl font-semibold w-[95%] mt-10 mb-6">Web</h1>
         
+        <MediaItem 
+          title='00. River House Website'
+          imageSrc='/bg/riverhouse.PNG'
+          imagePos='object-top'
+          date='Feb. 2024.'
+          description={[
+            <p className="leading-loose mobile:leading-relaxed" key='a'>
+              A simple full-stack site made using Next.js, Tailwind CSS, and MongoDB.
+            </p>,
+            <p className='mt-2 leading-loose mobile:leading-relaxed' key='b'>
+              I designed the look and feel of the site, using media provided to me by the business owner. I also
+              created a simple &ldquo;posts&rdquo; system for informing guests about any events or updates. The
+              posts are styled using Markdown, complete with a live editor.
+            </p>,
+            <p className="leading-loose mobile:leading-relaxed mt-2" key='c'>
+              Only admins can create, edit, and delete posts &mdash; login is handled using Auth0.
+            </p>
+          ]}
+          isVideo={false}
+          halfWidth={false}
+          links={[
+            {
+              text: 'View site.',
+              url: 'https://www.furnished-rentals.com',
+              ext: true
+            },
+          ]}
+          bgDarkness={60}
+        />
+
+        <MediaItem
+          title='01. UKG Job Referral Tool'
+          imageSrc='/bg/bg-ukg.PNG'
+          imagePos='object-top'
+          date='Dec. 2021.'
+          description={[
+            <p className="leading-relaxed" key='a'>
+              <span className='font-mono font-bold italic'>Job Referral Tool</span> &nbsp;was a semester-long project
+              for CS320 - Software Engineering at UMass Amherst. Students were split into teams of 10, each with a
+              student manager who had taken the class previously. <span className='mobile:hidden'>Each team was tasked
+              with creating a prototype for an internal job referral app for the HR company, UKG. The project
+              requirements were to have the following features implemented:</span>
+            </p>,
+            <ul className='list-disc ml-5 mt-2 leading-relaxed mobile:hidden' key='b'>
+              <li>View listings, leave referral</li>
+              <li>Search/filter listings</li>
+              <li>Manager create/delete listings</li>
+              <li>Manager view referrals</li>
+            </ul>,
+            <p className="leading-loose mt-2 mobile:hidden" key='c'>
+              My team chose to go with React.js, Express and PostgreSQL for our tech stack, and a
+              &quot;neumorphic&quot; design for the frontend.
+            </p>
+          ]}
+          isVideo={false}
+          halfWidth={false}
+          links={[
+            { text: 'View Heroku deployment.', url: 'https://job-listing-tool-320.herokuapp.com', ext: true },
+            { text: 'View source on GitHub.', url: 'https://github.com/elinottonson/job-listing-tool', ext: true }
+          ]}
+          bgDarkness={70}
+        />
+
+        <div className='w-[95%] flex flex-col mt-4'>
+          <h2 className="pl-1 font-mono">02. This Website :)</h2>
+          <p className="text-sm text-neutral-400 font-mono mb-2 ml-4 mt-2 w-full max-w-[1366px] self-center">
+            Dec. 2021 (ongoing)
+          </p>
+          <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
+            <a
+              target='_blank'
+              className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px] w-fit text-neutral-400'
+            >
+              View source on GitHub.
+            </a>
+          </Link>
+        </div>
+
+        <h1 className="text-2xl font-semibold w-[95%] mt-12 mb-6">Native/Misc</h1>
+
         <MediaItem 
           title='00. OpenGL Renderer'
           imageSrc='/bg/bg-opengl.PNG'
@@ -100,41 +180,10 @@ const Code = () => {
           />
         </div>
         
-        <MediaItem 
-          title='03. UKG Job Referral Tool'
-          imageSrc='/bg/bg-ukg.PNG'
-          imagePos='object-top'
-          date='Dec. 2021.'
-          description={[
-            <p className="leading-relaxed" key='a'>
-              <span className='font-mono font-bold italic'>Job Referral Tool</span> &nbsp;was a semester-long project
-              for CS320 - Software Engineering at UMass Amherst. Students were split into teams of 10, each with a
-              student manager who had taken the class previously. <span className='mobile:hidden'>Each team was tasked
-              with creating a prototype for an internal job referral app for the HR company, UKG. The project
-              requirements were to have the following features implemented:</span>
-            </p>,
-            <ul className='list-disc ml-5 mt-2 leading-relaxed mobile:hidden' key='b'>
-              <li>View listings, leave referral</li>
-              <li>Search/filter listings</li>
-              <li>Manager create/delete listings</li>
-              <li>Manager view referrals</li>
-            </ul>,
-            <p className="leading-loose mt-2 mobile:hidden" key='c'>
-              My team chose to go with React.js, Express and PostgreSQL for our tech stack, and a
-              &quot;neumorphic&quot; design for the frontend.
-            </p>
-          ]}
-          isVideo={false}
-          halfWidth={false}
-          links={[
-            { text: 'View Heroku deployment.', url: 'https://job-listing-tool-320.herokuapp.com', ext: true },
-            { text: 'View source on GitHub.', url: 'https://github.com/elinottonson/job-listing-tool', ext: true }
-          ]}
-          bgDarkness={70}
-        />
+        
 
         <MediaItem 
-          title='04. Our House Bot'
+          title='03. Our House Bot'
           imageSrc='/bg/bg-ourhousebot.PNG'
           imagePos='object-top'
           date='2020.'
@@ -182,20 +231,6 @@ const Code = () => {
           bgDarkness={70}
         />
 
-        <div className='w-[95%] flex flex-col mt-10'>
-          <h2 className="pl-1 font-mono">05. This Website :)</h2>
-          <p className="text-sm text-neutral-400 font-mono mb-2 ml-4 mt-2 w-full max-w-[1366px] self-center">
-            Dec. 2021 (ongoing)
-          </p>
-          <Link href='https://github.com/pokeblokdude/portfolio-site-next'>
-            <a
-              target='_blank'
-              className='font-mono hover:underline hover:cursor-pointer ml-2 mt-[-8px] w-fit text-neutral-400'
-            >
-              View source on GitHub.
-            </a>
-          </Link>
-        </div>
       </div>
     </>
   )
