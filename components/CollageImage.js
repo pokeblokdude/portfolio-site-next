@@ -12,7 +12,7 @@ export default function CollageImage({
     <div style={{ ... wrapperStyle, position: 'relative' }}>
       <Image 
         layout="fill"
-        src={photo.src}
+        src={photo}
         placeholder={'blurDataURL' in photo ? 'blur' : undefined}
         { ... { alt, title, sizes, className, onClick }}
       />

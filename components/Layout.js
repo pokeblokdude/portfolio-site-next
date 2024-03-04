@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
         <Navbar />
         {children}
         <p className='font-light font-mono text-neutral-400 text-center text-xs min-w-fit mb-10 mt-12'>
-          Last updated: 2/19/24
+          Last updated: 3/4/24
         </p>
       </div>
     </>

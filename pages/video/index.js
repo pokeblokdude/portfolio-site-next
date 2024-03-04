@@ -60,17 +60,12 @@ const Video = ({ recentUploads }) => {
       </Head>
       <div className="w-full max-w-[1366px] flex flex-col">
 
-        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Reel</h1>
-
-        <div className="w-[95%] aspect-video self-center mb-8">
-          <ReactPlayer url='https://youtu.be/vifiwWY8VtY' width='100%' height='100%' controls={true}/>
-        </div>
 {/* ============================================== FILMS ========================================================== */}
-        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Films</h1>
+        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Narrative</h1>
 
         <div className="flex flex-col items-center">
 
-          <MediaItem 
+          <MediaItem
             title='00. Descent'
             imageSrc='/bg/bg-descent.png'
             imagePos='object-center'
@@ -143,33 +138,27 @@ const Video = ({ recentUploads }) => {
               setModalOpen={setModalOpen}
             />
           </div>
-
-          <MediaItem 
-            title='03. The Machine'
-            imageSrc='/bg/bg-the-machine.jpeg'
-            imagePos='object-center'
-            date='Dec. 2018.'
-            description={[
-              <p className="leading-loose mobile:leading-relaxed" key='a'>
-                <span className="font-bold italic font-mono">The Machine</span> was my final project for VM120 -&nbsp;
-                Foundations in Media Arts Production at Emerson College. It&apos;s a psychological-horror-themed short
-                film about a young man coming to terms with the future<span className="desktop:hidden">.</span> 
-                <span className="mobile:hidden">, inspired by some of the darker episodes of 
-                <span className="italic"> Doctor Who</span> and <span className="italic">Black Mirror.</span></span>
-              </p>,
-              <p className="leading-loose mt-4 mobile:leading-relaxed mobile:hidden" key='b'>
-                I wrote, directed, shot and edited the film. It was written over Thanksgiving break and shot at 
-                my house the next weekend. The music is by my good friend, Caleb Kennedy.
-              </p>
-            ]}
-            videoUrl='https://www.youtube.com/watch?v=l0_MGz5IqvY'
-            isVideo={true}
-            halfWidth={false}
-            setVideoUrl={setVideoUrl}
-            setModalOpen={setModalOpen}
-          />
-
           <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
+            <MediaItem 
+              title='03. The Machine'
+              imageSrc='/bg/bg-the-machine.jpeg'
+              imagePos='object-center'
+              date='Dec. 2018.'
+              description={[
+                <p className="leading-loose mobile:leading-relaxed" key='a'>
+                  <span className="font-bold italic font-mono">The Machine</span> was my final project for VM120 at
+                  Emerson College. It&apos;s a psychological-horror-themed short
+                  film about a young man coming to terms with the future<span className="desktop:hidden">.</span> 
+                  <span className="mobile:hidden">, inspired by some of the darker episodes of 
+                  <span className="italic"> Doctor Who</span> and <span className="italic">Black Mirror.</span></span>
+                </p>,
+              ]}
+              videoUrl='https://www.youtube.com/watch?v=l0_MGz5IqvY'
+              isVideo={true}
+              halfWidth={true}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
+            />
             <MediaItem 
               title='04. Global Singularity Project'
               imageSrc='/bg/bg-gsp.jpeg'
@@ -189,33 +178,13 @@ const Video = ({ recentUploads }) => {
               setVideoUrl={setVideoUrl}
               setModalOpen={setModalOpen}
             />
-            <MediaItem 
-              title='05. A Time-Lapse Journey through 2016'
-              imageSrc='/bg/bg-timelapse.jpeg'
-              imagePos='object-center'
-              date='Jan. 2017.'
-              description={[
-                <p className="leading-loose" key='a'>
-                  <span className="font-mono font-bold italic">A Time-Lapse Journey through 2016 </span>was the 
-                  project that got me into film. Using my first DSLR camera, I shot various landscapes around my home
-                  in western Massachusetts. The film is set to music from C418&apos;s&nbsp;
-                  <span className="italic">Minecraft - Volume Beta.</span>
-                </p>
-              ]}
-              videoUrl='https://www.youtube.com/watch?v=RWq_bcAp9As'
-              isVideo={true}
-              halfWidth={true}
-              setVideoUrl={setVideoUrl}
-              setModalOpen={setModalOpen}
-            />
           </div>
         </div>
 
 {/* ============================================== VIDEOS ====================================================== */}
-        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Videos</h1>
+        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Music Video</h1>
 
         <div className="flex flex-col items-center">
-
           <MediaItem 
             title='00. Passing By (Official Music Video)'
             imageSrc='/bg/bg-gruff.png'
@@ -241,27 +210,29 @@ const Video = ({ recentUploads }) => {
             setVideoUrl={setVideoUrl}
             setModalOpen={setModalOpen}
           />
+        </div>
 
+
+        <h1 className="text-2xl font-semibold w-[95%] self-center my-10">3D & Motion Graphics</h1>
+
+        <div className="flex flex-col items-center">
           <MediaItem 
-            title='01. CS:GO - Zeitgeist'
-            imageSrc='/bg/bg-csgo.png'
+            title='00. YouTube Shapes Intro'
+            imageSrc='/bg/bg-shapes.png'
             imagePos='object-center'
-            date='Aug. 2018'
+            date='Feb. 2023'
             description={[
               <p className="leading-loose" key='a'>
-                <span className="font-mono font-bold italic">CS:GO - Zeitgeist </span>
-                is a frag movie I made using moments from me and my friends&apos; gameplay in Valve&apos;s tactical
-                shooter, <span className="italic"> Counter-Strike: Global Offensive. </span>
-                <span className="mobile:hidden">Footage was captured using the game&apos;s built-in &quot;demo&quot;
-                replay system, as well as a third party tool called Half-Life Advanced Effects for keyframing camera
-                moves. I rebuilt stylized UI elements using Adobe After Effects.</span>
+                A stylized intro for my YouTube channel, made as part of a full rebrand, representing the letters as
+                simple shapes. Modeling and animation was done in Blender, using a custom material to immitate
+                &ldquo;grain shading.&rdquo;
               </p>,
-              <p className="leading-loose mt-4 mobile:hidden" key='b'>
-                The music used is &quot;Zeitgeist&quot; by <span className="italic">Savant,</span> hence the title of
-                the video.
-              </p>
+              <p className="leading-loose" key='b'>
+                I used After Effects to refine the animation, as well as composite with the background, add film
+                grain, and colorize the shapes, which were grayscale in Blender.
+              </p>,
             ]}
-            videoUrl='https://youtu.be/wuCA8XTfaSg'
+            videoUrl='https://youtu.be/clArh9sY1xs'
             isVideo={true}
             halfWidth={false}
             setVideoUrl={setVideoUrl}
@@ -269,6 +240,28 @@ const Video = ({ recentUploads }) => {
           />
 
           <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
+
+            <MediaItem 
+              title='01. CS:GO - Zeitgeist'
+              imageSrc='/bg/bg-csgo.png'
+              imagePos='object-left'
+              date='Aug. 2018'
+              description={[
+                <p className="leading-relaxed" key='a'>
+                  <span className="font-mono font-bold italic">CS:GO - Zeitgeist </span>
+                  is a &ldquo;frag movie&rdquo; I made using gameplay moments from
+                  <span className="italic"> Counter-Strike: Global Offensive. </span>
+                  <span className="mobile:hidden">Footage was captured using the game&apos;s built-in &quot;demo&quot;
+                  replay system, as well as a third party tool called Half-Life Advanced Effects for keyframing camera
+                  moves. I rebuilt stylized UI elements using Adobe After Effects.</span>
+                </p>,
+              ]}
+              videoUrl='https://youtu.be/wuCA8XTfaSg'
+              isVideo={true}
+              halfWidth={true}
+              setVideoUrl={setVideoUrl}
+              setModalOpen={setModalOpen}
+            />
             <MediaItem 
               title='02. Fear.'
               imageSrc='/bg/bg-fear.png'
@@ -278,7 +271,7 @@ const Video = ({ recentUploads }) => {
                 <p className="leading-loose min:leading-relaxed" key='a'>
                   <span className="font-mono font-bold italic">Fear.</span> was a project for ART 374 - 
                   Intro Computer Animation at UMass Amherst. 
-                  Using Autodesk Maya, the assignment was to pick one of four moods, and express it using
+                  Using Autodesk Maya, the assignment was to pick one of four emotions, and express it using
                   only lighting and composition.
                 </p>
               ]}
@@ -288,37 +281,64 @@ const Video = ({ recentUploads }) => {
               setVideoUrl={setVideoUrl}
               setModalOpen={setModalOpen}
             />
-            <MediaItem 
-              title='03. Senior Class Trip to Puerto Rico'
-              imageSrc='/bg/bg-pr.jpg'
-              imagePos='object-center'
-              date='Jun. 2018'
-              description={[
-                <p className="leading-loose" key='a'>
-                  <span className="font-mono font-bold italic">Senior Class Trip to Puerto Rico</span> is a vlog-style
-                  documentation of my high school class&apos;s senior trip. We went to Puerto Rico in the wake of
-                  Hurricane Maria to help a local organiztion in building sustainable shelter/school buildings and
-                  gardens out of recycled materials and bamboo.
-                </p>
-              ]}
-              videoUrl='https://www.youtube.com/watch?v=b9i07oCLcPc'
-              isVideo={true}
-              halfWidth={true}
-              setVideoUrl={setVideoUrl}
-              setModalOpen={setModalOpen}
-            />
           </div>
+
+          <MediaItem 
+            title='03. Collide And Slide'
+            imageSrc='/bg/bg-collide.jpg'
+            imagePos='object-center'
+            date='Jul. 2023'
+            description={[
+              <p className="leading-loose" key='a'>
+                A Unity tutorial I made describing the process of creating a &ldquo;character controller&rdquo;
+                from scratch. I used a JavaScript library called <span className="italic">Motion Canvas </span>
+                to create the shapes and animations seen in the video.
+              </p>,
+              <p className="leading-loose" key='b'>
+                I&apos;m particularly proud of the thumbnail (the image seen here), which was created using a combo
+                of Motion Canvas and Photoshop.
+              </p>,
+            ]}
+            videoUrl='https://youtu.be/YR6Q7dUz2uk'
+            isVideo={true}
+            halfWidth={false}
+            setVideoUrl={setVideoUrl}
+            setModalOpen={setModalOpen}
+          />
             
+          <h1 className="text-2xl font-semibold w-[95%] self-center my-10">Documentary & Montage</h1>
+
+          <MediaItem 
+            title='00. Senior Class Trip to Puerto Rico'
+            imageSrc='/bg/bg-pr.jpg'
+            imagePos='object-center'
+            date='Jun. 2018'
+            description={[
+              <p className="leading-loose" key='a'>
+                <span className="font-mono font-bold italic">Senior Class Trip to Puerto Rico</span> is a vlog-style
+                documentation of my high school class&apos;s senior trip. We went to Puerto Rico in the wake of
+                Hurricane Maria to help a local organiztion in building sustainable shelter/school buildings and
+                gardens out of recycled materials and bamboo.
+              </p>
+            ]}
+            videoUrl='https://www.youtube.com/watch?v=b9i07oCLcPc'
+            isVideo={true}
+            halfWidth={false}
+            setVideoUrl={setVideoUrl}
+            setModalOpen={setModalOpen}
+          />
+         
+
           <div className="flex w-[95%] mobile:flex-col mobile:w-full mobile:items-center">
             <MediaItem 
-              title='04. Adventure at Amethyst Brook'
+              title='01. Adventure at Amethyst Brook'
               imageSrc='/bg/bg-amethyst.png'
               imagePos='object-center'
               date='Feb. 2020'
               description={[
                 <p className="leading-loose" key='a'>
-                  My girlfriend and I took her dog, Nugget, for a walk at Amethyst Brook, a nature reserve in Amherst,
-                  MA. The video is set to music from&nbsp;
+                  My then-girlfriend, Janna, and I took her dog, Nugget, for a walk at Amethyst Brook, a nature reserve
+                  in Amherst, MA. The video is set to music from&nbsp;
                   <span className="italic">The Legend of Zelda: Breath of the Wild.</span>
                 </p>
               ]}
@@ -329,7 +349,7 @@ const Video = ({ recentUploads }) => {
               setModalOpen={setModalOpen}
             />
             <MediaItem 
-              title='05. Montage'
+              title='02. Montage'
               imageSrc='/bg/bg-montage.png'
               imagePos='object-left'
               date='Oct. 2018'
